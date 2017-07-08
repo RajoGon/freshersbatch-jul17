@@ -1,0 +1,18 @@
+body{
+	background-color: #70f9e7;
+}
+.box {
+	font-size: 4em;
+}
+.box2 {
+	font-size: 3em;
+	text-decoration: line-through;
+}
+.box3 {
+	font-size: 2em;
+	text-decoration: underline;
+}
+.box4 {
+	font-size: 1.5em;
+	
+}

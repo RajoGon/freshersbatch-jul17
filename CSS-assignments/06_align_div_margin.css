@@ -1,0 +1,29 @@
+body{
+	background-color: #ffffff;
+}
+body> div{
+border: 1px solid green;
+ height: 130px; 
+   width: 250px; 
+}
+div> div{
+	position:relative;
+	width: 30%;
+	border: 1px solid green;
+	float:left;
+	display: inline-block;
+	margin:2px;
+	padding-left: 2px;
+}
+.gcol{
+	background-color: green;
+	color: white;
+}
+#one, #two, #three, #four {
+clear:left;
+}
+
+
+
+
+

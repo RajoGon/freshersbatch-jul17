@@ -1,0 +1,20 @@
+body{
+	background-color: white;
+}
+div{
+	margin-bottom:5%;
+}
+.box {
+	background-color: #70f9e7;
+	border: 5px solid black;
+}
+.box2 {
+	background-color: #70f9e7;
+	border: 3px solid black;
+}
+
+.box3 {
+	background-color: #70f9e7;
+	border: 1px solid black;
+}
+

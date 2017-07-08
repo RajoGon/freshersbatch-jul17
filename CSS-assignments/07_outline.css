@@ -1,0 +1,11 @@
+body{
+	background-color: #70f9e7;
+}
+.box {
+	background-color: white;
+	font-size: 2em;
+	border:2px solid red;
+	outline: 5px dashed green;
+	display:inline-block;
+
+}
