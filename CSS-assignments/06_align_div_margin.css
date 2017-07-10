@@ -1,29 +1,13 @@
 body{
-	background-color: #ffffff;
+	background-color: white;
 }
-body> div{
-border: 1px solid green;
- height: 130px; 
-   width: 250px; 
+table,tr,td{
+	border:1px solid green;
 }
-div> div{
-	position:relative;
-	width: 30%;
-	border: 1px solid green;
-	float:left;
-	display: inline-block;
-	margin:2px;
-	padding-left: 2px;
-}
-.gcol{
+#col{
+	color:white;
 	background-color: green;
-	color: white;
 }
-#one, #two, #three, #four {
-clear:left;
-}
-
-
 
 
 

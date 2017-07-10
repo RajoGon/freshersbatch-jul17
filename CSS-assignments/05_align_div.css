@@ -1,19 +1,9 @@
 body{
-	background-color: #70f9e7;
+	background-color: white;
 }
-div{
-	width: 5%;
+table, tr ,td{
 	border: 1px solid black;
-	float:left;
+	border-collapse: collapse;
+
 }
-
-#three{
-clear:left;
-}
-
-#five{
-clear:left;
-}
-
-
 
