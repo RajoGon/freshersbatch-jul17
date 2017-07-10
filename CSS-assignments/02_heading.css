@@ -1,6 +1,10 @@
 body{
 	background-color: #70f9e7;
 }
+@keyframes bl{
+    from {background-color: white;}
+    to {background-color: black;}
+}
 .box {
 	font-size: 4em;
 }
@@ -14,5 +18,7 @@ body{
 }
 .box4 {
 	font-size: 1.5em;
+	animation-name: bl;
+	animation-duration: 1s;
 	
 }
