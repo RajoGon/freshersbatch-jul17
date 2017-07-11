@@ -1,7 +1,7 @@
 function vow() {
 
-	var x = document.getElementById('num1').value ;
-	var y = document.getElementById('num2').value ;
+	var x = parseInt(document.getElementById('num1').value) ;
+	var y = parseInt(document.getElementById('num2').value) ;
 
 	for (i=x ; i<=y ; i++)
 	{
