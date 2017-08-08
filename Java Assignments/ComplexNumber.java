@@ -7,11 +7,12 @@ class ComplexSwapper{
 	 return this.c.real+" + i"+this.c.imaginary;
 	}
 }
-
-
 public class ComplexNumber{
 	public int real;
 	public int imaginary;
+	public ComplexNumber(){
+
+	}
 	public ComplexNumber(int r, int img){
 		this.real = r;
 		this.imaginary = img;
@@ -45,20 +46,33 @@ public class ComplexNumber{
 	public String toString(){
 	 return this.real+" + i"+this.imaginary;
 	}
+	public static void swap2(ComplexNumber xt[]){
+		ComplexNumber temp = xt[0];
+		xt[0] = xt[1];
+		xt[1]=temp;	
+	}
 	
 	public static void main(String args[]){
 		ComplexNumber a = new ComplexNumber(5,6);
 		ComplexNumber b = new ComplexNumber(2,3);
+		ComplexNumber x[] = new ComplexNumber[2];
+		x[0] = new ComplexNumber(4,2);
+		x[1] = new ComplexNumber(1,9);
 		a.add(b);
 		a.subtract(b);
 		a.multiply(b);
 		ComplexSwapper a1 = new ComplexSwapper(a);
 		ComplexSwapper b1 = new ComplexSwapper(b);
-		System.out.println("Before swap, a = "+a1);
-		System.out.println("Before swap, b = "+b1);
+		System.out.println("Before swap using wrapper, a = "+a1);
+		System.out.println("Before swap using wrapper, b = "+b1);
 		swap(a1,b1);
-		System.out.println("After swap, a = "+a1);
-		System.out.println("After swap, b = "+b1);
+		System.out.println("After swap using wrapper, a = "+a1);
+		System.out.println("After swap using wrapper, b = "+b1);
+		System.out.println("Before swap , a = "+x[0]);
+		System.out.println("Before swap , b = "+x[1]);
+		ComplexNumber.swap2(x);
+		System.out.println("After swap , a = "+x[0]);
+		System.out.println("After swap , b = "+x[1]);
 		
 	}
 }
