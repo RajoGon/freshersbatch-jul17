@@ -1,0 +1,9 @@
+package com.collections;
+
+public class BDate {
+
+	public BDate() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

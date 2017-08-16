@@ -1,0 +1,16 @@
+package com.collections;
+class Employee{
+	@Override
+	public int hashCode() {
+		return 0;
+	}
+
+}
+public class Observe {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

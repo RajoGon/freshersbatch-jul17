@@ -1,0 +1,20 @@
+package com.collections;
+class Employee{
+	@Override
+	public int hashCode() {
+		return 0;
+	}
+	@Override
+	public boolean equals(Object e) {
+		return true;	
+	}
+
+}
+public class Observe {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

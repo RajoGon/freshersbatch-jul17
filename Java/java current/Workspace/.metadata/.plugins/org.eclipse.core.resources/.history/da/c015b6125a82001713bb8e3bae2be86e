@@ -1,0 +1,16 @@
+package com.collections;
+
+import java.util.HashSet;
+
+public class HashLinkedOrderedOrUnordered {
+
+	public static void main(String[] args) {
+		 HashSet<String> ts = new HashSet<String>();
+	       ts.add("RED");
+	       ts.add("ORANGE");
+	       ts.add("BLUE");
+	       ts.add("GREEN");
+
+	}
+
+}

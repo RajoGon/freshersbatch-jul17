@@ -13,7 +13,6 @@
 <fullyQualifiedTypeName name="com.nestedclass.MyBox"/>
 <fullyQualifiedTypeName name="com.callback.Bplistener"/>
 <fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.createexception.Account"/>
 <fullyQualifiedTypeName name="java.lang.AutoCloseable"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
@@ -27,4 +26,13 @@
 <fullyQualifiedTypeName name="java.util.concurrent.Executors"/>
 <fullyQualifiedTypeName name="java.util.concurrent.Callable"/>
 <fullyQualifiedTypeName name="java.util.concurrent.Future"/>
+<fullyQualifiedTypeName name="java.util.LinkedHashSet"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.util.ListIterator"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="com.collections.ChatRoom"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
 </qualifiedTypeNameHistroy>
