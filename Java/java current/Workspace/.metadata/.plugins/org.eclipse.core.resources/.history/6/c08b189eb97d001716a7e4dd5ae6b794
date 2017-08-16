@@ -1,0 +1,14 @@
+package com.enumtest;
+
+public enum Status{};
+class OrdeStatus{
+	Status status;
+	int orderid;
+	String ordername;
+	int price;
+}
+public class TestEnum {
+	public static void main(String[] args) {
+		
+	}
+}

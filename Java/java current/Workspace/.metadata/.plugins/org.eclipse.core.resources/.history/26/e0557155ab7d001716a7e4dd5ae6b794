@@ -1,0 +1,14 @@
+package com.annotation.student;
+import com.annotation.getter.*;
+import java.lang.reflect.Method;
+public class Student {
+	private int marks;
+	
+	public Student(){
+		this.marks = 90;
+	}
+	@Getter(message = "Hello")
+	public int getMarks(){
+		return this.marks;
+	}
+}

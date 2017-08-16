@@ -1,0 +1,19 @@
+package com.callback;
+class BloodPressure{
+	private int bloodpressure;
+	public BloodPressure(int bloodpressure) {
+		this.bloodpressure = bloodpressure;
+		this.new CheckBp().check(bloodpressure);
+	}
+	private class CheckBp{
+		public void check(int bloodpressure){
+			
+		}
+	}
+	
+}
+public class TestCallBack {
+	public static void main(String[] args) {
+		
+	}
+}

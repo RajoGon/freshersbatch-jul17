@@ -1,0 +1,66 @@
+package com.testthread;
+
+class MyThreads implements Runnable{
+
+	public MyThreads() {
+		
+		Thread t1 = new Thread(this);
+		t1.setName("Ping");
+		t1.start();
+		Thread t2 = new Thread(this);
+		t2.setName("Pong");
+		t2.start();
+		Thread t3 = new Thread(this);
+		t3.setName("Tong");
+		t3.start();
+	}
+	@Override
+	public void run() {
+
+		Thread currentthread = Thread.currentThread();
+		if(currentthread.getName().equals("Ping")) {
+			for(int i=0 ; i<10 ; i++) {
+				System.out.println(currentthread.getName());
+				try {
+					Thread.sleep(300);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+		}else if(currentthread.getName().equals("Pong")) {
+			for(int i=0 ; i<10 ; i++) {
+				System.out.println("\t"+currentthread.getName());
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		else if(currentthread.getName().equals("Tong")) {
+				for(int i=0 ; i<10 ; i++) {
+					System.out.println("\t\t"+currentthread.getName());
+					try {
+						Thread.sleep(800);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+					
+				}
+			}
+		}
+		
+	}
+	
+
+
+
+public class TestThread {
+
+	public static void main(String[] args){
+		// TODO Auto-generated constructor stub
+		new MyThreads();
+	}
+	
+
+}

@@ -1,0 +1,22 @@
+package com.testthread;
+
+class Tank implements Runnable{
+	static int fill;
+	static int spill;
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
+
+public class WaterThread {
+
+	public static void main(String[] args) {
+	
+
+	}
+
+}

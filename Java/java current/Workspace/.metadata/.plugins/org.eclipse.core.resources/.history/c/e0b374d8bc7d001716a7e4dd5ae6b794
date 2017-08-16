@@ -1,0 +1,28 @@
+package com.nestedclass;
+
+class MyBox{
+	private int id;
+	private String name;
+	public MyBox(int id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+	
+	private class MyCache{	
+		public void getDetails(){
+			System.out.println(id+"\n"+name);
+		}
+	}
+	public void getMyInfo(){
+		new MyCache().getDetails();
+	}
+}
+
+
+public class TestNested {
+ public static void main(String[] args) {
+	MyBox a = new MyBox(1, "Rajo");
+	MyBox.MyCache b = a.new MyCache();
+	b.getDetails();
+}
+}

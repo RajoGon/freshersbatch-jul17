@@ -1,0 +1,20 @@
+package com.nestedclass;
+
+class MyBox{
+	private int id;
+	private String name;
+	public MyBox(int id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+	private class MyCache{
+		
+	}
+}
+
+
+public class TestNested {
+ public static void main(String[] args) {
+	
+}
+}

@@ -1,0 +1,66 @@
+package com.testthread;
+
+class Tank implements Runnable{
+
+	static int current = 0;
+	static int limit = 800;
+	Tank(){
+		Thread t1 = new Thread(this);
+		t1.setName("Fill");
+		t1.start();
+		Thread t2 = new Thread(this);
+		t2.setName("Out");
+		t2.start();
+		Thread t3 = new Thread(this);
+		t3.setName("Controller");
+		t3.setDaemon(true);
+		t3.start();
+	}
+	@Override
+	public void run() {
+		Thread currentthread = Thread.currentThread();
+		if(currentthread.getName().equals("Fill")) {
+			for(;;) {
+				current = current + 50;
+				System.out.println("Filling : Status of water level- "+current);
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+		}else if(currentthread.getName().equals("Out")) {
+			for(;;) {
+				current = current - 70;
+				System.out.println("Spilling : Status of water level- "+current);
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		else if(currentthread.getName().equals("Controller")) {
+				for(;;) {
+					System.out.println(" Controlling ");
+					try {
+						Thread.sleep(100);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+					
+				}
+			}
+		
+	}
+	
+}
+
+public class WaterThread {
+
+	public static void main(String[] args) {
+		new Tank();
+
+	}
+
+}

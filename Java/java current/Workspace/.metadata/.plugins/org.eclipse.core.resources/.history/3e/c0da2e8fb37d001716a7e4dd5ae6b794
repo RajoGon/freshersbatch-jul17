@@ -1,0 +1,43 @@
+package com.annotation.getterlogic;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+
+import com.annotation.getter.Getter;
+import com.annotation.student.Student;
+
+public class GetterRunner {
+	
+	public static void main(String[] args) {
+		String methodname;
+		String initial;
+		char initialfieldname;
+		String ending;
+		Student runner = new Student();
+        Method[] methods = runner.getClass().getMethods();
+        Field[] fields = runner.getClass().getFields();
+        for (Method method : methods) {
+        	Getter annos = method.getAnnotation(Getter.class);
+            if (annos != null) {
+                try {               	
+                	methodname=method.getName();
+                	initial = methodname.substring(0,3);
+                	initialfieldname = methodname.charAt(3);
+                	ending = methodname.substring(3,methodname.length());
+                	if( initial.equals("get") &&  Character.isUpperCase(initialfieldname)){
+                		
+                		
+                	}else{
+                		System.out.println("Invalid");
+                	}
+                	               	               	               	                                	               	                           	
+                    //method.invoke(runner);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                	
+                }
+            }
+        }
+	}
+
+}

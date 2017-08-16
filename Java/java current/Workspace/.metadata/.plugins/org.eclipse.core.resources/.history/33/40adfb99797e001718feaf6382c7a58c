@@ -1,0 +1,9 @@
+package com.testthread;
+
+public class TestThread {
+
+	public TestThread() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,15 @@
+package com.callback;
+class BloodPressure{
+	private int bloodpressure;
+	public BloodPressure(int bloodpressure) {
+		this.bloodpressure = bloodpressure;
+	}
+	private class CheckBp{
+		
+	}
+}
+public class TestCallBack {
+	public static void main(String[] args) {
+		
+	}
+}

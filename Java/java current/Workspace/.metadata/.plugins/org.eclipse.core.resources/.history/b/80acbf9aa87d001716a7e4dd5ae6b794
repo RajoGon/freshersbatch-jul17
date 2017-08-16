@@ -1,0 +1,8 @@
+package com.annotation.student;
+
+public class Student {
+	private int marks;
+	Student(){
+		this.marks = 90;
+	}
+}

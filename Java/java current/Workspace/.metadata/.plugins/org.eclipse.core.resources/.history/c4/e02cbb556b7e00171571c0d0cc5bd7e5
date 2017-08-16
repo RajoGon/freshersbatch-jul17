@@ -1,0 +1,23 @@
+package com.createexception;
+class Account{
+	int bal;
+	Account(int bal){
+		this.bal = bal;
+	}
+	public void withdraw(int withdraw){
+		this.bal = this.bal - withdraw;
+	}
+}
+
+
+
+public class CustomException {
+
+	public static void main(String[] args) {
+		Account a = new Account(1000);
+		a.withdraw(500);
+		a.withdraw(2000);
+
+	}
+
+}

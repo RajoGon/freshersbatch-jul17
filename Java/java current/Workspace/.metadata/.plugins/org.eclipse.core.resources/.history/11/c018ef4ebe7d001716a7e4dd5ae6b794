@@ -1,0 +1,38 @@
+package com.nestedclass;
+import java.util.*;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+@SuppressWarnings("unused")
+class MyBox{
+	private HashMap<Integer,ArrayList<String>> data=new HashMap<Integer,ArrayList<String>>();  
+//	private int id;
+//	private String name;
+	Timestamp timestamp;
+	public MyBox(int id, String name) {
+//		this.id = id;
+//		this.name = name;
+		
+		this.timestamp = new Timestamp(System.currentTimeMillis());
+	}
+	
+	private class MyCache{	
+		public void getDetails(){
+			System.out.println(id+"\n"+name+"\nThis data was added at, "+timestamp);
+		}
+	}
+	
+	public void getMyInfo(){
+		new MyCache().getDetails();
+	}
+}
+
+
+public class TestNested {
+ public static void main(String[] args) {
+	MyBox a = new MyBox(1, "Rajo");
+	//MyBox.MyCache b = a.new MyCache();
+	//b.getDetails();
+	a.getMyInfo();
+}
+}

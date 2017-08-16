@@ -1,0 +1,14 @@
+package com.nestedclass;
+
+class MyBox{
+	private class MyCache{
+		
+	}
+}
+
+
+public class TestNested {
+ public static void main(String[] args) {
+	
+}
+}

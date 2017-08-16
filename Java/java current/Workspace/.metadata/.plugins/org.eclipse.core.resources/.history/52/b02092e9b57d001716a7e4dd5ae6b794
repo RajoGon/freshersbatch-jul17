@@ -1,0 +1,21 @@
+package com.annotation.student;
+import com.annotation.getter.*;
+public class Student {
+	public int marks;
+	public String name;
+	
+	public Student(){
+		this.marks = 90;
+		this.name = "Rajo";
+	}
+	@Getter
+	public String getMarks(){
+		//System.out.println("Hello");
+		return this.name;
+	}
+	@Getter
+	public String getName(){
+		//System.out.println("Hello");
+		return this.name;
+	}
+}

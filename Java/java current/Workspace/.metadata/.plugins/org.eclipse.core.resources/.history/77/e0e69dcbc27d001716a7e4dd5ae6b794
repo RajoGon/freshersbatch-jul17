@@ -1,0 +1,38 @@
+package com.callback;
+interface Bplistener {
+    void someoneSaidHello();
+}
+
+class BloodPressure{
+	private int bloodpressure;
+	public BloodPressure(int bloodpressure) {
+		this.bloodpressure = bloodpressure;
+		if(this.bloodpressure>140){
+			this.new CheckBp().check(bloodpressure);
+		}else{
+			System.out.println("Your bp is under control");
+		}
+	}
+	
+	public void setBloodpressure(int bloodpressure){
+		this.bloodpressure = bloodpressure;
+		if(this.bloodpressure>140){
+			this.new CheckBp().check(bloodpressure);
+		}else{
+			System.out.println("Your bp is under control");
+		}
+	}
+	
+	private class CheckBp{
+		public void check(int bloodpressure){
+			System.out.println("Warning BP above 140");
+		}
+	}
+	
+	
+}
+public class TestCallBack {
+	public static void main(String[] args) {
+		
+	}
+}

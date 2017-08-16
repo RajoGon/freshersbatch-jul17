@@ -1,0 +1,33 @@
+package com.testthread;
+
+class MyThreads implements Runnable{
+
+	public MyThreads() {
+		// TODO Auto-generated constructor stub
+		Thread t1 = new Thread(this);
+		t1.setName("Ping");
+		t1.start();
+		Thread t2 = new Thread(this);
+		t2.setName("Pong");
+		t2.start();
+		Thread t3 = new Thread(this);
+		t3.setName("Tong");
+		t3.start();
+	}
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
+
+
+
+public class TestThread {
+
+	public TestThread() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,21 @@
+package com.createexception;
+class Account{
+	int bal;
+	Account(int bal){
+		this.bal = bal;
+	}
+	public void withdraw(int withdraw){
+		this.bal = this.bal - withdraw;
+	}
+}
+
+
+
+public class CustomException {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

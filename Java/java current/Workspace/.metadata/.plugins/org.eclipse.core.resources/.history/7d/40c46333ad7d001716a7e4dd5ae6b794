@@ -1,0 +1,14 @@
+package com.annotation.test;
+
+import com.annotation.student.*;
+public class AnnotationTest {
+
+	public static void main(String[] args) {
+		Student student1 = new Student();
+		int val = student1.getMarks();
+		String name = "Default";
+		name = student1.getName();
+		System.out.println("Hello"+name+" you marks are "+val);
+	}
+
+}

@@ -1,0 +1,13 @@
+package com.annotation.student;
+import com.annotation.getter.*;
+public class Student {
+	private int marks;
+	@Getter
+	public Student(){
+		this.marks = 90;
+	}
+	
+	public int getMarks(){
+		return this.marks;
+	}
+}

@@ -1,0 +1,38 @@
+package com.createexception;
+class LowBalance extends Exception{
+	/**
+	 * 
+	 */
+	String message;
+	private static final long serialVersionUID = 1L;
+	public void LowBalance(){
+		this.message = "";
+	}
+	public void LowBalance(String message){
+		this.message = message;
+	}
+}
+
+
+class Account{
+	int bal;
+	Account(int bal){
+		this.bal = bal;
+	}
+	public void withdraw(int withdraw){
+		this.bal = this.bal - withdraw;
+	}
+}
+
+
+
+public class CustomException {
+
+	public static void main(String[] args) {
+		Account a = new Account(1000);
+		a.withdraw(500);
+		a.withdraw(2000);
+
+	}
+
+}
