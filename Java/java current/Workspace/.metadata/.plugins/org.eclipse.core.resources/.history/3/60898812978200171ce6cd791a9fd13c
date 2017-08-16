@@ -1,0 +1,160 @@
+package com.collections;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map.Entry;
+import java.util.Set;
+
+
+class ParkedCarOwnerDetails {
+	String owerName;
+	String carModel;
+	int carNO;
+	Double owerMobileNo;
+	String owerAddress;
+	
+	ParkedCarOwnerDetails(String owerName, String carModel, int carNO, Double owerMobileNo, String owerAddress) {
+		super();
+		this.owerName = owerName;
+		this.carModel = carModel;
+		this.carNO = carNO;
+		this.owerMobileNo = owerMobileNo;
+		this.owerAddress = owerAddress;
+	}
+	
+	public String getOwerName() {
+		return owerName;
+	}
+	public void setOwerName(String owerName) {
+		this.owerName = owerName;
+	}
+	public String getCarModel() {
+		return carModel;
+	}
+	public void setCarModel(String carModel) {
+		this.carModel = carModel;
+	}
+	public int getCarNO() {
+		return carNO;
+	}
+	public void setCarNO(int carNO) {
+		this.carNO = carNO;
+	}
+	public Double getOwerMobileNo() {
+		return owerMobileNo;
+	}
+	public void setOwerMobileNo(Double owerMobileNo) {
+		this.owerMobileNo = owerMobileNo;
+	}
+	public String getOwerAddress() {
+		return owerAddress;
+	}
+	public void setOwerAddress(String owerAddress) {
+		this.owerAddress = owerAddress;
+	} 
+	
+	
+}
+
+class ParkedCarOwenerList {
+	final static int floors = 3;
+	final static int sections = 4;
+	final static int carLimit = 20;
+	final static int maxLimit = 240;
+	int currentFloor=1;
+	int currentSection=1;
+	static int currentCars = 0;
+	HashMap<Integer,HashMap<Integer,ArrayList<ParkedCarOwnerDetails>>> floor= new HashMap<Integer,HashMap<Integer,ArrayList<ParkedCarOwnerDetails>>>(); 
+	
+
+	int currentPos;
+	ArrayList<ParkedCarOwnerDetails> mallList = new ArrayList<ParkedCarOwnerDetails>();
+	int addnewcar(ParkedCarOwnerDetails obj) {
+		currentCars++;
+		if(currentCars>=5) {
+			currentCars = 1;
+			currentSection ++;
+			if(currentSection == 3) {
+				if(currentFloor<4) {
+					currentFloor++;
+					currentSection = 1;
+				}else {
+					currentCars--;
+					System.out.println("Parking Full");
+					return 1;
+				}
+				
+				
+			}
+		}
+		floor.put(currentFloor, new HashMap<Integer, ArrayList<ParkedCarOwnerDetails>>());
+		floor.get(currentFloor).put(currentSection, new ArrayList<ParkedCarOwnerDetails>());
+		floor.get(currentFloor).get(currentSection).add(obj);
+
+		System.out.println("Car added to parking, on floor"+this.currentFloor+"and section"+this.currentSection+" at position"+currentCars);
+
+		return 1;	
+	}
+	int removecar() {
+		return 0;
+		
+	}
+	public String getparkedcarlocation(ParkedCarOwnerDetails obj) {
+		 Iterator<Entry<Integer, HashMap<Integer, ArrayList<ParkedCarOwnerDetails>>>> it = floor.entrySet().iterator();
+		 System.out.println("Size "+floor.size());
+		    while (it.hasNext()) {
+		    	Entry<Integer, HashMap<Integer, ArrayList<ParkedCarOwnerDetails>>> pair = it.next();
+		    	for(int i = 1;i<=3;i++) {
+
+					System.out.println("Floor");
+		    	}
+
+		    	
+	
+		    }
+
+		return "Your car is parked on, "+this.currentFloor+"at section"+this.currentSection+" at position"+this.currentPos;		
+	}
+	@Override
+	public String toString() {
+		
+		return "Car parked at , "+this.currentFloor+this.currentSection+currentCars;
+		
+	}
+}
+
+
+public class MallManagement {
+
+	public static void main(String[] args) {
+		
+		ParkedCarOwnerDetails P[] = new ParkedCarOwnerDetails[20];
+		P[0] = new ParkedCarOwnerDetails("Rajo","Bugatti",1,(double) 99988233,"Nagpur");
+		P[1] = new ParkedCarOwnerDetails("Aditya","Audi",2,(double) 99548233,"Mumbai");
+		P[2] = new ParkedCarOwnerDetails("Abc","BMW",3,(double) 99568233,"Delhi");
+		P[3] = new ParkedCarOwnerDetails("Xyz","Lambo",4,(double) 99989833,"Pune");
+		P[4] = new ParkedCarOwnerDetails("MNO","Auto",5,(double) 91288233,"Nagpur");
+		P[5] = new ParkedCarOwnerDetails("Rasdajo","Bugatti",6,(double) 99988233,"Nagpur");
+		P[6] = new ParkedCarOwnerDetails("Aditya","Audi",7,(double) 99548233,"Mumbai");
+		P[7] = new ParkedCarOwnerDetails("Abcqwd","BMW",8,(double) 99568233,"Delhi");
+		P[8] = new ParkedCarOwnerDetails("Xdyz","Lambo",9,(double) 99989833,"Pune");
+		P[9] = new ParkedCarOwnerDetails("MsNO","Auto",10,(double) 91288233,"Nagpur");
+		P[10] = new ParkedCarOwnerDetails("Rdajo","Bugatti",11,(double) 99988233,"Nagpur");
+		P[11] = new ParkedCarOwnerDetails("Acditya","Audi",12,(double) 99548233,"Mumbai");
+		P[12] = new ParkedCarOwnerDetails("Asbc","BMW",13,(double) 99568233,"Delhi");
+		P[13] = new ParkedCarOwnerDetails("cyz","Lambo",14,(double) 99989833,"Pune");
+		P[14] = new ParkedCarOwnerDetails("McNO","Auto",15,(double) 91288233,"Nagpur");
+		P[15] = new ParkedCarOwnerDetails("Rxcajo","Bugatti",16,(double) 99988233,"Nagpur");
+		P[16] = new ParkedCarOwnerDetails("Adxcitya","Audi",17,(double) 99548233,"Mumbai");
+		P[17] = new ParkedCarOwnerDetails("Azxbc","BMW",18,(double) 99568233,"Delhi");
+		P[18] = new ParkedCarOwnerDetails("Xvyz","Lambo",19,(double) 99989833,"Pune");
+		P[19] = new ParkedCarOwnerDetails("MNerO","Auto",20,(double) 91288233,"Nagpur");
+		ParkedCarOwenerList a = new ParkedCarOwenerList();
+		for(int i=0 ; i<P.length;i++) {
+			a.addnewcar(P[i]);
+		}
+		a.getparkedcarlocation(P[0]);
+	}
+
+}
