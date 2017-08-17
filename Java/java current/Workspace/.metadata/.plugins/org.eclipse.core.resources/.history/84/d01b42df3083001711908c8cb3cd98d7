@@ -1,0 +1,23 @@
+package com.java8specs;
+@FunctionalInterface
+interface OrderManage{
+	
+}
+
+
+
+public class OrderLambda {
+	int price;
+	String status;
+	int id;
+
+	public static void main(String[] args) {
+		OrderLambda a[] = new OrderLambda[10];
+		
+		for(int i=0;i<10;i++) {
+			int randomNum = 5000 + (int)(Math.random() * 2000); 
+		}
+
+	}
+
+}

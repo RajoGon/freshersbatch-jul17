@@ -1,0 +1,21 @@
+package com.generics;
+
+import java.util.Iterator;
+import java.util.List;
+
+public class ListNumbers {
+
+	void printList(List<? extends Number> list) {
+		Iterator<E> itr = list.iterator();
+		while(itr.hasNext()) {
+			System.out.println(itr.next());
+		}
+	}
+	
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}

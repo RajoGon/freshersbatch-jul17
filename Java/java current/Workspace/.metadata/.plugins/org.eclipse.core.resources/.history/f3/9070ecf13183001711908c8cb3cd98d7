@@ -1,0 +1,44 @@
+package com.java8specs;
+@FunctionalInterface
+interface OrderManage<T>{
+	boolean test(T a);
+}
+
+
+
+public class OrderLambda {
+	int price;
+	String status;
+	int id;
+	public OrderLambda(int price, String status, int id) {
+		this.id = id;
+		this.price = price;
+		this.status = status;
+	}
+
+	public static void main(String[] args) {
+		OrderLambda a[] = new OrderLambda[10];
+		String statusrandom;
+		for(int i=0;i<10;i++) {
+			int randomNum = 5000 + (int)(Math.random() * 20000); 
+			if(randomNum%2 == 0) {
+				statusrandom = "ACCEPTED";
+			}else {
+				statusrandom = "COMPLETED";
+			}
+			a[i] = new OrderLambda(i,statusrandom,randomNum);
+			System.out.println(randomNum);
+		}
+		
+		OrderManage<OrderLambda> priceFilter = (OrderLambda t) -> t.price>10000;
+		OrderManage<OrderLambda> statusFilter = (OrderLambda t) -> t.status.equals("ACCEPTED") ||t.status.equals("COMPLETED");
+		System.out.println("More than 10000");
+		for(OrderLambda order : a) {
+			if(priceFilter.test(order)) {
+				System.out.println(order.price);
+			}
+		}
+
+	}
+
+}

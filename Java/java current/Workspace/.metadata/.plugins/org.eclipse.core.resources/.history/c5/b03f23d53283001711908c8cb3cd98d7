@@ -1,0 +1,10 @@
+package com.java8specs;
+
+public class RemoveIfJava8 {
+
+	public static void main(String[] args) {
+
+
+	}
+
+}

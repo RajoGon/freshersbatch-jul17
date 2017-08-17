@@ -1,0 +1,21 @@
+package com.java8specs;
+
+import java.util.ArrayList;
+import java.util.function.Consumer;
+
+public class StringConsumer {
+	static StringBuilder result=null;
+	public static void main(String[] args) {
+		ArrayList<String> data = new ArrayList<String>();
+		
+		data.add("Axxxx");
+		data.add("Bxxxx");
+		data.add("Cxxxx");
+		data.add("Dxxxx");
+		
+		Consumer<String> consumer1 = (String x) -> {
+			result.append(x.charAt(0));
+			} ;  
+	}
+
+}

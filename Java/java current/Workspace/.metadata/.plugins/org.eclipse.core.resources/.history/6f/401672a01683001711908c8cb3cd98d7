@@ -1,0 +1,23 @@
+package com.generics;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+
+public class GenericMapKey<T> {
+	
+	static void printMapKeyValues(HashMap<? extends Number,?> list) {
+		Iterator<?> itr = list.keySet().iterator();
+		while(itr.hasNext()) {
+			System.out.println(itr.toString());
+		}
+	}
+	public static void main(String[] args) {
+		HashMap<Integer,String> genericMap = new HashMap<Integer,String>();
+		for(int i=0 ; i<5 ; i++) {
+			genericMap.put(i, "Some data");
+		}
+
+	}
+
+}

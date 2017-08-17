@@ -1,0 +1,13 @@
+package com.java8specs;
+
+import java.util.HashMap;
+
+
+public class StringAppendFromMap {
+
+	public static void main(String[] args) {
+		HashMap<Integer,Integer> data = new HashMap<Integer,Integer>();
+
+	}
+
+}

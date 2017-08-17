@@ -1,0 +1,17 @@
+package com.java8specs;
+
+@FunctionalInterface
+interface Arithmatic<T extends Number>{
+	T test(T a, T b);
+}
+
+
+
+public class FunctioncalArithmaticInterface {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

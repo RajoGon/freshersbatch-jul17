@@ -1,0 +1,48 @@
+package com.collections;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class FailSafe {
+
+	public static void main(String[] args) {
+		ArrayList<Integer> fail = new ArrayList<Integer>();
+		CopyOnWriteArrayList<Integer> safe = new CopyOnWriteArrayList<Integer>();
+		ExecutorService executor = Executors.newFixedThreadPool(2); 
+		Runnable t1 = new Runnable() {
+			@Override
+			public void run() {
+				System.out.println("Executing Fail");
+//				for(int i=0;i<10;i++) {
+//					fail.add(i);
+//				}
+//				Iterator<Integer> itr = fail.iterator();
+//				while(itr.hasNext()) {
+//					System.out.println(itr.next());
+//					fail.add(100);
+//				}
+			}
+		};
+		Runnable t2 = new Runnable() {
+			
+			@Override
+			public void run() {
+				System.out.println("Executing Safe");
+				for(int i=0;i<10;i++) {
+					safe.add(i);
+				}
+				Iterator<Integer> itr = fail.iterator();
+				while(itr.hasNext()) {
+					System.out.println(itr.next());
+					safe.add(100);
+				};
+			}
+		};
+		executor.execute(t1);
+		executor.execute(t2);
+	} 
+
+}

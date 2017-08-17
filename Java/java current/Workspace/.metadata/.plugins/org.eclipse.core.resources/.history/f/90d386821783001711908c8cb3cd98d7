@@ -1,0 +1,18 @@
+package com.generics;
+class MyWrapper<T>{
+	T data;
+	MyWrapper(T obj){
+		this.data = obj;
+	}
+	public T getObj() {
+		return this.data;
+	}
+}
+public class GenericWrapper {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

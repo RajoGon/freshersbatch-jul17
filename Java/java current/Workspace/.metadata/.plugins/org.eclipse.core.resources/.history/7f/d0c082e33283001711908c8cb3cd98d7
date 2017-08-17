@@ -1,0 +1,12 @@
+package com.java8specs;
+
+import java.util.ArrayList;
+
+public class RemoveIfJava8 {
+
+	public static void main(String[] args) {
+		ArrayList<Integer> nums = new ArrayList<Integer>();
+
+	}
+
+}

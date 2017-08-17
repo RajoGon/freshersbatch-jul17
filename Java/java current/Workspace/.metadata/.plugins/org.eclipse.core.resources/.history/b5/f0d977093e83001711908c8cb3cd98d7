@@ -1,0 +1,12 @@
+package com.java8specs;
+
+import java.util.Map;
+
+public class StringAppendFromMap {
+
+	public static void main(String[] args) {
+		Map<Integer,Integer> data = new Map<Integer,Integer>();
+
+	}
+
+}

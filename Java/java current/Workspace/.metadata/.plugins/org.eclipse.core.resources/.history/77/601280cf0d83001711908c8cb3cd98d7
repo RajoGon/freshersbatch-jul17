@@ -1,0 +1,19 @@
+package com.collections;
+
+import java.util.ArrayList;
+import java.util.concurrent.CopyOnWriteArrayList;
+
+public class FailSafe {
+
+	public static void main(String[] args) {
+		ArrayList<Integer> fail = new ArrayList<Integer>();
+		CopyOnWriteArrayList<Integer> safe = new CopyOnWriteArrayList<Integer>();
+		Runnable t1 = new Runnable() {
+			@Override
+			public void run() {
+				
+			}
+		};
+	} 
+
+}
