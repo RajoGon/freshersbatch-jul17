@@ -1,0 +1,26 @@
+package com.filehandling;
+import java.io.*;
+
+public class FileHandlingTest {
+
+	public static void main(String[] args) throws Exception {
+	
+		File file = new File("C:/Users/gon_r/Desktop/Hello.txt"); 
+		FileInputStream fis = new FileInputStream(file); 
+		StringBuilder sb = new StringBuilder(""); 
+		int i = 0; 
+		do { 
+			i = fis.read(); 
+			if(i != -1) 
+				sb.append((char)i);
+			}while(i != -1); 
+		File file2 = new File("abc.txt"); 
+		FileOutputStream fos = new FileOutputStream(file2); 
+		fos.write(sb.toString().getBytes()); 
+		fos.flush(); 
+		fos.close();
+	}
+	
+	
+
+}

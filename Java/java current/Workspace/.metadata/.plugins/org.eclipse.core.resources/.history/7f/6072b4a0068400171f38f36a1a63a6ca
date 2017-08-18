@@ -1,0 +1,11 @@
+package com.filehandling;
+import java.io.*;
+
+public class FileHandlingTest {
+
+	public static void main(String[] args) {
+	
+		File file = new File("C:/Users/gon_r/Desktop/Hello.txt"); 
+	}
+
+}
