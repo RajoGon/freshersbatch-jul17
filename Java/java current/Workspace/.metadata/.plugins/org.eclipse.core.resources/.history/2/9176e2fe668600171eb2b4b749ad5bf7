@@ -1,0 +1,7 @@
+package co.database;
+//1.	Try performing READ, UPDATE & DELETE operations on a table. Try first with Statement & then with PreparedStatement.
+public class BasicOperations {
+ public static void main(String[] args) {
+	
+}
+}

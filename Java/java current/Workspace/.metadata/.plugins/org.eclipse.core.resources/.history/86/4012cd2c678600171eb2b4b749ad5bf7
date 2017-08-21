@@ -1,0 +1,11 @@
+package com.database;
+
+public class BasicOperations {
+
+	public static void main(String[] args) throws Exception {
+
+		Class.forName("oracle.jdbc.driver.OracleDriver"); 
+		
+	}
+
+}

@@ -1,0 +1,19 @@
+package com.filehandling;
+//3.	Write an application to write 3 accounts having an account_no as integer then balance as double & then name as String into a file. Finally read all accounts & print the details on the console. Note: use DataInputStream & DataOutputStream.
+class Account{
+	private int id;
+	private double balance;
+	private String name;
+	public Account(int id, double balance, String name) {
+		this.id = id;
+		this.balance = balance;
+		this.name = name;
+	}
+}
+
+public class DataInputOutputAccount {
+	public static void main(String[] args) {
+		Account a = new Account[3];
+		a[0] = new Account()
+	}
+}

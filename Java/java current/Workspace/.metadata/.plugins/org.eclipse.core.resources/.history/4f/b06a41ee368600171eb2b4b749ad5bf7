@@ -1,0 +1,81 @@
+package com.filehandling;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
+class Date{
+	int day;
+	int month;
+	int year;
+	Date(){		
+	}
+	public Date(int day, int month, int year) {
+		this.day = day;
+		this.month = month;
+		this.year = year;
+	}
+	@Override
+	public String toString() {
+		return "Date [day=" + day + ", month=" + month + ", year=" + year + "]";
+	}
+		
+}
+
+class AccountNew implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+	public int id;
+	public double balance;
+	public String name;
+	public Date dob;
+	public AccountNew(int id, double balance, String name, Date dob) {
+		this.id = id;
+		this.balance = balance;
+		this.name = name;
+		this.dob = dob;
+	}
+	public AccountNew() {
+		this.id = 0;
+		this.balance = 0;
+		this.name = null;
+	}
+	@Override
+	public String toString() {
+		return "Account [id=" + id + ", balance=" + balance + ", name=" + name + "]";
+	}
+	
+}
+
+public class SerialDeserial {
+	
+	public static void addData(Account a[]) throws Exception {
+		File file = new File("SerialAccounts.txt");
+		FileOutputStream fos = new FileOutputStream(file); 
+		ObjectOutputStream os = new ObjectOutputStream(fos);
+		for(int i=0 ; i<3 ; i++) {
+			os.writeObject(a[i]); 
+		}	
+		System.out.println("Objects serialized");
+		os.flush(); 
+		os.close();
+
+	}
+	
+	
+
+	public static void main(String[] args)  throws Exception {
+		Date d[] = new Date[3];
+		d[0]= new Date(1,3,2017);
+		d[1]= new Date(2,11,2005);
+		d[2]= new Date(9,12,1995);
+		AccountNew[] a = new AccountNew[3];
+		a[0] = new AccountNew(1,2000,"Rajo",d[0]);
+		a[1] = new AccountNew(2,4000,"Aditya",d[1]);
+		a[2] = new AccountNew(3,6000,"Tind",d[2]);
+		
+	}
+
+}

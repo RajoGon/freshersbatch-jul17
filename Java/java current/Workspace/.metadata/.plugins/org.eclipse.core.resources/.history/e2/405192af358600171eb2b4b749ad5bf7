@@ -1,0 +1,39 @@
+package com.filehandling;
+class Date{
+	int day;
+	int month;
+	int year;
+	Date(){
+		
+	}
+	
+}
+class Account{
+	public int id;
+	public double balance;
+	public String name;
+	public Account(int id, double balance, String name) {
+		this.id = id;
+		this.balance = balance;
+		this.name = name;
+	}
+	public Account() {
+		this.id = 0;
+		this.balance = 0;
+		this.name = null;
+	}
+	@Override
+	public String toString() {
+		return "Account [id=" + id + ", balance=" + balance + ", name=" + name + "]";
+	}
+	
+}
+
+public class SerialDeserial {
+
+	public static void main(String[] args) {
+	
+
+	}
+
+}

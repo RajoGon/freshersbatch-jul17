@@ -1,0 +1,145 @@
+package com.filehandling;
+
+import java.io.*;
+import java.time.temporal.TemporalField;
+import java.util.*;
+
+//6.	Write an application to perform CRUD operations on Account. Use RandomAccessFile class. Also add a functionality to print the Accounts where account balance is more than 10000.
+public class CrudAccount {
+
+	public static void main(String[] args) throws Exception {
+		int choice;
+		int id;
+		double balance;
+		String name;
+		char again;
+		String x = null;
+		File file = new File("RandomAccessTemp.txt");
+		File file2 = new File("RandomAccessTemp.txt");
+		RandomAccessFile rfile = new RandomAccessFile(file, "rw");
+		
+		Scanner scan = new Scanner(System.in);
+		Scanner scanname = new Scanner(System.in);
+		do{
+		System.out.println(" ***** Menu*****");
+		System.out.println("Enter choice");
+		System.out.println("1.) Create Account");
+		System.out.println("2.) Get Account Details");
+		System.out.println("3.) Update Account Details");
+		System.out.println("4.) Delete Account Details");
+		
+		choice = scan.nextInt();
+		switch (choice)
+            {
+				case 1: 
+						System.out.println("Enter Account id: ");
+						id=scan.nextInt();
+						System.out.println("Enter Account balance: ");
+						balance = scan.nextDouble();
+						System.out.println("Enter Account name: ");
+						name = scanname.nextLine();
+						System.out.println("Details written");
+						rfile.writeInt(id);
+						rfile.writeDouble(balance);
+						rfile.writeUTF(name);
+						rfile.writeUTF(" ");
+						rfile.writeUTF(" ");
+						rfile.writeUTF(" ");
+						rfile.writeUTF(" ");
+						rfile.writeUTF(" ");
+						rfile.writeUTF("\n");
+						break;
+
+				case 2: System.out.println("Enter id of account you want to get:");
+						id=scan.nextInt();
+						rfile.seek(0);
+						boolean found = false;
+						do {
+								int tempid;
+								try{
+									tempid  = rfile.readInt();
+								}catch(Exception e) {
+									System.out.println("Account not found");
+									break;
+								}
+								
+							if(tempid == id) {														
+								System.out.println("Account details are:\nid = "+tempid+"\nBalance = "+rfile.readDouble()+"\nName = "+rfile.readUTF());
+								found = true;
+							}else {
+								rfile.readLine();
+							}
+						}while(found == false);
+
+						break;
+						
+				case 3: System.out.println("Enter id of account you want to edit:");
+						id=scan.nextInt();
+						rfile.seek(0);
+						boolean found2 = false;
+						do {
+							int tempid;
+							try{
+								tempid  = rfile.readInt();
+							}catch(Exception e) {
+								System.out.println("Account not found");
+								break;
+							}
+							
+							if(tempid == id) {		
+								System.out.println("Enter new balance");
+								double tempBalance = scan.nextDouble();
+								System.out.println("Enter new Name");
+								String tempName = scanname.nextLine();
+								rfile.writeDouble(tempBalance);
+								rfile.writeUTF(tempName);
+								System.out.println("Updated dccount details are:\nid = "+tempid+"\nBalance = "+tempBalance+"\nName = "+tempName);
+								found2 = true;
+								break;
+							}else {
+								rfile.readLine();								
+							}
+						}while(found2 == false);
+
+						break;
+
+				case 4: System.out.println("Enter id of account you want to delete:");
+						RandomAccessFile tempFile = new RandomAccessFile(file2, "rw");
+						id=scan.nextInt();
+						rfile.seek(0);
+						tempFile.seek(0);
+						boolean found3 = false;
+						do {
+							int tempid;
+							try{
+								tempid  = rfile.readInt();
+							}catch(Exception e) {
+								System.out.println("End of File");
+
+								break;
+							}
+							
+							if(tempid != id) {		
+								
+								tempFile.writeBytes(rfile.readLine());	
+								tempFile.writeUTF("\n\n");
+
+							}else {
+								System.out.println(rfile.readLine()	);						
+							}
+						}while(true);
+						
+						break;	
+
+				
+				default : 
+                System.out.println("Wrong Entry \n ");
+                break;   
+            }
+		System.out.println("\nDo you want to continue ? ");
+		again = scan.next().charAt(0);   
+		}while(again == 'Y'|| again == 'y'); 
+		rfile.close();
+	}
+
+}
