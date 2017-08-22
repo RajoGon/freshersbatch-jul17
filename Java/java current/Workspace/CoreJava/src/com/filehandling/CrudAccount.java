@@ -1,6 +1,8 @@
 package com.filehandling;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.time.temporal.TemporalField;
 import java.util.*;
 
@@ -130,7 +132,14 @@ public class CrudAccount {
 								tempFile.writeUTF("\n");
 							}
 						}while(true);
-						rfile = tempFile;
+						rfile.close();
+						tempFile.close();
+						Files.copy(
+							      file2.toPath(), 
+							      file.toPath(), 
+							      StandardCopyOption.REPLACE_EXISTING);
+						rfile = new RandomAccessFile(file, "rw");
+						tempFile = new RandomAccessFile(file2, "rw");
 						break;	
 
 				

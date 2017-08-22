@@ -1,0 +1,55 @@
+package com.database;
+import java.sql.*;
+import org.apache.commons.dbcp2.BasicDataSource;
+public class DataTransferTransaction {
+	public static BasicDataSource createConnections() {
+		BasicDataSource dataSource = new BasicDataSource();
+		dataSource.setUrl("jdbc:oracle:thin:@localhost:1521:xe");
+		dataSource.setUsername("system");
+		dataSource.setPassword("rajo123");
+		dataSource.setMinIdle(5);
+		dataSource.setMaxIdle(10);
+		dataSource.setMaxOpenPreparedStatements(100);
+	
+		return dataSource;		
+	}
+	public static Connection setConnections() {
+		
+		try(BasicDataSource dataSource = createConnections()) {			
+			Connection dbcon = dataSource.getConnection();
+			return dbcon;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+	public static void batchUpdates(Connection dbcon) throws SQLException {
+		PreparedStatement readData = dbcon.prepareStatement("Select * from EMP");
+		PreparedStatement insertData = dbcon.prepareStatement("INSERT INTO EMP3 VALUES (?,?,?,?,?,?,?,?)");
+		ResultSet set = readData.executeQuery();
+		dbcon.setAutoCommit(false);
+		while(set.next()) {
+			
+		}
+	}
+
+	public static void main(String[] args) {
+		System.out.println("Creating connection...");
+		Connection dbcon = setConnections();
+		System.out.println("Connection established");
+		
+		try {
+			batchUpdates(dbcon);
+		} catch (SQLException e1) {
+			System.out.println("Failed to update");
+		}
+		
+		try {
+			System.out.println("Closing connection");
+			dbcon.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

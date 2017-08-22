@@ -1,0 +1,51 @@
+package com.database;
+//3.	Save an image into database table & read it back.
+import java.sql.*;
+
+import org.apache.commons.dbcp2.BasicDataSource;
+
+public class DbcpImages {
+
+	public static BasicDataSource createConnections() {
+		BasicDataSource dataSource = new BasicDataSource();
+		dataSource.setUrl("jdbc:oracle:thin:@localhost:1521:xe");
+		dataSource.setUsername("system");
+		dataSource.setPassword("rajo123");
+		dataSource.setMinIdle(5);
+		dataSource.setMaxIdle(10);
+		dataSource.setMaxOpenPreparedStatements(100);
+	
+		return dataSource;		
+	}
+	
+	public static Connection setConnections() {
+		
+		try(BasicDataSource dataSource = createConnections()) {			
+			Connection dbcon = dataSource.getConnection();
+			return dbcon;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return null;
+		}
+		
+	}
+	public static void insertImage(Connection dbcon) throws SQLException {
+		PreparedStatement insertImage = dbcon.prepareStatement("INSERT INTO ADMISSION VALUES (?,?,?)");
+	}
+	
+	public static void main(String[] args) throws SQLException {
+		
+		System.out.println("Creating connection...");
+		Connection dbcon = setConnections();
+		System.out.println("Connection established");					
+		insertImage(dbcon);
+		
+		try {
+			System.out.println("Closing connection");
+			dbcon.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

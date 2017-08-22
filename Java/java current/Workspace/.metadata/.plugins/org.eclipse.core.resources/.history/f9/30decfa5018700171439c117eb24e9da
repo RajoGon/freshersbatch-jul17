@@ -1,0 +1,84 @@
+package com.database;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
+//3.	Save an image into database table & read it back.
+import java.sql.*;
+
+import javax.imageio.stream.ImageInputStream;
+
+import org.apache.commons.dbcp2.BasicDataSource;
+
+public class DbcpImages {
+
+	public static BasicDataSource createConnections() {
+		BasicDataSource dataSource = new BasicDataSource();
+		dataSource.setUrl("jdbc:oracle:thin:@localhost:1521:xe");
+		dataSource.setUsername("system");
+		dataSource.setPassword("rajo123");
+		dataSource.setMinIdle(5);
+		dataSource.setMaxIdle(10);
+		dataSource.setMaxOpenPreparedStatements(100);
+	
+		return dataSource;		
+	}
+	
+	public static Connection setConnections() {
+		
+		try(BasicDataSource dataSource = createConnections()) {			
+			Connection dbcon = dataSource.getConnection();
+			return dbcon;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return null;
+		}
+		
+	}
+	public static void insertImage(Connection dbcon) throws SQLException, FileNotFoundException {
+		PreparedStatement insertImage = dbcon.prepareStatement("INSERT INTO ADMISSION VALUES (?,?,?)");
+		insertImage.setInt(1, 2);
+		insertImage.setString(2, "Test");
+		File file = new File("C:/Users/gon_r/Desktop/java current/images/prod1.jpg");
+		FileInputStream fis = new FileInputStream(file);
+		insertImage.setBinaryStream(3, fis, file.length());
+		insertImage.executeUpdate();
+	}
+	public static void readImage(Connection dbcon) throws SQLException, IOException {
+		PreparedStatement readImage = dbcon.prepareStatement("SELECT * from admission where ID=2");
+
+		ResultSet set = readImage.executeQuery();
+		while(set.next()) {
+			File file2 = new File("testimage.jpg");
+			//FileOutputStream fos = new FileOutputStream(file2);
+			InputStream a = set.getBinaryStream("IMAGE");
+			Files.copy(
+				      a, 
+				      file2.toPath(), 
+				      StandardCopyOption.REPLACE_EXISTING);
+		}
+		
+		
+	}
+	
+	public static void main(String[] args) throws SQLException, FileNotFoundException {
+		
+		System.out.println("Creating connection...");
+		Connection dbcon = setConnections();
+		System.out.println("Connection established");	
+		System.out.println("Inserting data");
+		//insertImage(dbcon);
+		readImage(dbcon);
+		try {
+			System.out.println("Closing connection");
+			dbcon.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

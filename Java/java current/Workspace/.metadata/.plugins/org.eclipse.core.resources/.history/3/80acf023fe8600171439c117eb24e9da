@@ -1,0 +1,28 @@
+package com.database;
+
+import java.sql.*;
+
+import org.apache.commons.dbcp2.BasicDataSource;
+
+public class DbcpImages {
+
+	public BasicDataSource createConnections() {
+		BasicDataSource dataSource = new BasicDataSource();
+		dataSource.setUrl("jdbc:oracle:thin:@localhost:1521:xe");
+		dataSource.setUsername("system");
+		dataSource.setPassword("rajo123");
+		dataSource.setMinIdle(5);
+		dataSource.setMaxIdle(10);
+		dataSource.setMaxOpenPreparedStatements(100);
+		
+		
+		
+		return dataSource;
+		
+	}
+	public static void main(String[] args) {
+		
+
+	}
+
+}
