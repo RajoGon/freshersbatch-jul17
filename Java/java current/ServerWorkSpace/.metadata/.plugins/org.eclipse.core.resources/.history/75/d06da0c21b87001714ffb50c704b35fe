@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1> Please login</h1><br>
+<form action="" method="post">
+	Username <input type="text" name="uname"><br><br>
+	Password <input type="password" name="password"><br>
+	Username password should be same
+	<button type="submit" >Submit</button>
+	
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+package com.myserverhandler;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class LoginHandle extends HttpServlet {
+	
+	public void doPost(HttpServletRequest request,HttpServletResponse response) throws IOException{	
+    	if(request.getParameter("uname").equals(request.getParameter("password"))){
+    		response.setContentType("text/html");
+    		PrintWriter out= response.getWriter(); 
+        	out.println("<h1>Welcome to javaforlearn.com<h1>");
+    	}		
+	}
+	public void doGet(){
+		
+	}
+	
+
+	public static void main(String[] args) {
+		
+	}
+
+}

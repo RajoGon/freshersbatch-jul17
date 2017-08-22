@@ -1,0 +1,21 @@
+package com.myserverhandler;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class LoginHandle extends HttpServlet {
+	public void doPost(){
+		HttpServletRequest request;
+		HttpServletResponse response;
+	}
+	public void doGet(){
+		
+	}
+	
+
+	public static void main(String[] args) {
+		
+	}
+
+}
