@@ -1,0 +1,15 @@
+package com.bean;
+
+import java.util.ArrayList;
+
+public class ShopBean {
+private ArrayList<String> myBooks=null;
+	public void addBooks(String books[]){
+		for(String a:books){
+			this.myBooks.add(a);
+		}
+	}
+	public ArrayList<String> getBooks(){
+		return this.myBooks;
+	}
+}

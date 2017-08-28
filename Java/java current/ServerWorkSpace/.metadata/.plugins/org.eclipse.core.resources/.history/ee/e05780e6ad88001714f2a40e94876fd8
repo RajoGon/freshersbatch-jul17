@@ -1,0 +1,14 @@
+package com.springtest;
+import java.util.Map;
+
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class TestSpring {
+	public static void main(String[] args) {
+		AbstractApplicationContext iocContainer = new ClassPathXmlApplicationContext("Beans_simple.xml");		
+		System.out.println("Total Price of items = "+iocContainer.getBeansOfType(Order.class).entrySet().stream().map(Map.Entry::getValue).map(Order::getItem).map(Item::getPrice).mapToInt(Integer::intValue).sum());
+		iocContainer.close();
+	}
+}

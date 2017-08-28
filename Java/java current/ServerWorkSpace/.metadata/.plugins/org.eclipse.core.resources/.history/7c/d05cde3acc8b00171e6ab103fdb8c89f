@@ -1,0 +1,67 @@
+package com.springtest;
+
+import java.util.ArrayList;
+
+public class User {
+	String loginName;
+	String password;
+	String firstName;
+	String country;
+	boolean loginStatus = false;
+	static ArrayList<String> users = new ArrayList<>();
+	long loginTime;
+	long logoutTime;
+	public void login(String user){
+		for(String a:users){
+			if(a.equals(user)){
+				this.loginTime =  System.currentTimeMillis();
+				this.loginName = user;
+				this.loginStatus = true;
+				System.out.println("Logged in as, "+a);
+			}
+		}
+		if(this.loginStatus==false){
+			System.out.println("Register user first");
+		}
+	}
+	public void logout(String user){
+		if(this.loginStatus==true){
+			this.logoutTime = System.currentTimeMillis();
+			System.out.println("Session duration for user, "+this.loginName+" is "+(this.logoutTime-this.loginTime)+" milliseconds");
+		}else{
+			System.out.println("Please login user first");
+		}
+		
+	}
+	public void register(String user){
+		users.add(user);		
+	}
+	
+	
+	
+	public String getLoginName() {
+		return loginName;
+	}
+	public void setLoginName(String loginName) {
+		this.loginName = loginName;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getCountry() {
+		return country;
+	}
+	public void setCountry(String country) {
+		this.country = country;
+	}
+	
+}

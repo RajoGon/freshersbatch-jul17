@@ -1,0 +1,16 @@
+package com.springtest;
+
+public class StringOperations {
+	public String getCapStr(String str){
+		str = str.toUpperCase();
+		return str;
+	}
+	public String getLowerStr(String str){
+		str = str.toUpperCase();
+		return str;
+	}
+	public int getLength(String str){
+		
+		return str.length();
+	}
+}

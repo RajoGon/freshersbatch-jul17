@@ -1,0 +1,49 @@
+package com.springtest;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
+
+@Aspect
+public class UserAspect {
+	
+	@Pointcut("execution(* UserHandler.login(..))" )
+	public void login(){}
+	
+	@Pointcut("execution(* UserHandler.logout(..))" )
+	public void logout(){}
+	
+	@Pointcut("execution(* UserHandler.register(..))" )
+	public void register(){}
+	
+	
+	@Around("login()")
+	public void loginUser(ProceedingJoinPoint joinPoint) throws Throwable{
+		Object[] args= joinPoint.getArgs();
+		if(((String) args[0]).length()<4){
+			System.out.println("Username must be minimum 3 characters long to login.");
+		}else{
+			joinPoint.proceed();
+		}
+	}
+	
+	@Around("register()")
+	public void registerUser(ProceedingJoinPoint joinPoint) throws Throwable{
+		Object[] args= joinPoint.getArgs();
+		if(((String) args[0]).length()<4){
+			System.out.println("Username must be minimum 3 characters long to register.");
+		}else{
+			joinPoint.proceed();
+			System.out.println("Registered, "+args[0]);
+		}
+	}
+	
+	@Around("logout()")
+	public void logoutUser(ProceedingJoinPoint joinPoint) throws Throwable{
+		
+			joinPoint.proceed();
+
+	}
+	
+}

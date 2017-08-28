@@ -1,0 +1,11 @@
+package com.springtest;
+
+import org.aspectj.lang.annotation.Aspect;
+
+@Aspect
+public class AddToVectorAndListAspect {
+	long timer;
+	
+	@PointCut("")
+	public void timeit(){}
+}

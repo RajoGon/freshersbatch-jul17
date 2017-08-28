@@ -1,0 +1,23 @@
+package com.springtest;
+
+import java.util.ArrayList;
+
+import org.aspectj.lang.annotation.AfterThrowing;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
+
+@Aspect
+public class StringAspect{
+	ArrayList<Exception> exceptionList = new ArrayList<Exception>();
+	@Pointcut("execution(* StringOperations.getCapStr(..))")
+	public void uppercut(){}
+	
+	@Pointcut("execution(* StringOperations.getLowerStr(..))"  )
+	public void lowercut(){}
+	
+	@AfterThrowing(pointcut = "lowercut()", throwing="ex")
+	public void getExcep(Exception ex){
+		exceptionList.add(ex);
+		System.out.println("Exception thrown ");
+	}
+}

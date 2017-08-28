@@ -1,0 +1,11 @@
+package com.springtest;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+
+public class ChatRoom {
+	private String name;
+	private HashSet<String> users = new HashSet<String>();
+	private ArrayList<String> messages = new ArrayList<String>();
+}

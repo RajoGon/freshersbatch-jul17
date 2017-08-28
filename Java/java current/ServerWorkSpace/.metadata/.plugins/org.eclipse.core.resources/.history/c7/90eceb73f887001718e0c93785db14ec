@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Computer Books</title>
+</head>
+<body>
+<%@ page import="java.util.*" %>
+<% 
+	String uname = (String)session.getAttribute("uname"); 
+%>
+<h1>Welcome <%= uname %> </h1><br>
+<h2>Your books in the cart are</h2>
+    <form action='controller?forward=logout' method='post' >
+    	<%
+    		for(String a : (String[])session.getAttribute("books")){
+    			"<p>"+a+"</p>"
+    		}
+    	%>
+    	<input type='submit' value='Logout'>
+    </form>
+</body>
+</html>

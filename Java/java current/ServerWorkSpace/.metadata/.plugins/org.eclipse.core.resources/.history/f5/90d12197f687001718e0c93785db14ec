@@ -1,0 +1,8 @@
+package com.bean;
+
+public class ShopBean {
+private String[] books=null;
+public String[] addBooks(String books[]){
+	books.
+}
+}

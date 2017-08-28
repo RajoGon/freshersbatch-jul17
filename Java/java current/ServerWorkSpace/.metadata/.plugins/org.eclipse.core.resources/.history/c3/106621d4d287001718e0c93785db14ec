@@ -1,0 +1,52 @@
+package com.myserverhandler;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+
+public class ControllerServlet extends HttpServlet {
+	ServletContext ctx;
+	public void init(ServletConfig config){
+		this.ctx = config.getServletContext();
+	}
+	ArrayList<String> cbooksCart = new ArrayList<String>();
+	public void doPost(HttpServletRequest request,HttpServletResponse response) throws IOException, ServletException{
+		HttpSession session = null;
+		session = request.getSession();
+		String loginParam = request.getParameter("forward");
+		String loginStatus = request.getParameter("loggedin");
+		RequestDispatcher rd = null;
+		if("authentic".equals(loginParam)){
+			 rd = this.ctx.getRequestDispatcher("/login");
+			 loginParam = null;
+			rd.forward(request, response);	
+		}
+		else if("true".equals(loginStatus)){			
+			String user = request.getParameter("username");
+			 
+    		if(session.isNew()){
+    			session.setAttribute("username", user);
+    		}    		
+			rd = this.ctx.getRequestDispatcher("/computerbooks?username="+user);
+			loginStatus = null;
+			rd.forward(request, response);
+		}
+		else if("false".equals(loginStatus)){
+			rd = this.ctx.getRequestDispatcher("/login.html");
+			loginStatus=null;
+			rd.forward(request, response);
+		}else if("historybooks".equals(loginParam)){
+			String cbooks[] = request.getParameterValues("cbooks");			
+			for(String a: cbooks){
+				cbooksCart.add(a);
+			}
+			cbooksCart.stream().forEach(System.out::println);
+			session.setAttribute("cbooks", cbooksCart);
+
+		}
+	}
+	
+}

@@ -1,0 +1,12 @@
+package com.springtest;
+
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
+
+@Aspect
+public class AddToVectorAndListAspect {
+	long timer;
+	
+	@Pointcut("execution(* AddToVectorAndList.*(..))" )
+	public void timeit(){}
+}

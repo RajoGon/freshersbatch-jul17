@@ -1,0 +1,9 @@
+package com.bean;
+
+public class ShopBean {
+private String[] books=null;
+	public String[] addBooks(String books[]){
+		this.books = books;
+		return this.books;
+	}
+}

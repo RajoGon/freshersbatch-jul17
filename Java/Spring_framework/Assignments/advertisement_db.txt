@@ -1,0 +1,18 @@
+use advertisement
+
+db.Items.insert({name: "Cloths"})
+db.Items.insert({name: "Furniture"})
+db.Items.insert({name: "Mobile"})
+db.Items.insert({name: "Real Estate"})
+
+
+db.Actions.insert({name: "Update"})
+db.Actions.insert({name: "Delete"})
+
+
+db.DateConditions.insert({condition: "EQUALS"})
+db.DateConditions.insert({condition: "BETWEEN"})
+db.DateConditions.insert({condition: "ON/AFTER"})
+db.DateConditions.insert({condition: "AFTER"})
+db.DateConditions.insert({condition: "BEFORE"})
+db.DateConditions.insert({condition: "ON/BEFORE"})

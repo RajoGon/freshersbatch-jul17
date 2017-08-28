@@ -1,0 +1,8 @@
+package com.springtest;
+
+public class User {
+	String loginName;
+	String password;
+	String firstName;
+	String country;
+}

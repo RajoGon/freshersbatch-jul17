@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Computer Books</title>
+</head>
+<body>
+<%! 
+	String uname = request.getSession().getAttribute("uname"); 
+%>
+<h1>Welcome <%= uname %> </h1>
+</body>
+</html>

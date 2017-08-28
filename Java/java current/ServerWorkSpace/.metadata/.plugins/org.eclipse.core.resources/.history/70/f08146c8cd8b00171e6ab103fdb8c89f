@@ -1,0 +1,16 @@
+package com.springtest;
+
+public class User {
+	String loginName;
+	String password;
+	String firstName;
+	String country;
+	public User(String loginName, String password, String firstName, String country) {
+		super();
+		this.loginName = loginName;
+		this.password = password;
+		this.firstName = firstName;
+		this.country = country;
+	}
+	
+}

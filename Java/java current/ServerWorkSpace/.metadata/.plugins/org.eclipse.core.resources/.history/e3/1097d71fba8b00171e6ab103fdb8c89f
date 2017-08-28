@@ -1,0 +1,26 @@
+package com.springtest;
+
+import java.security.Signature;
+import java.util.ArrayList;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.AfterThrowing;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
+
+@Aspect
+public class StringAspect{
+
+	@Pointcut("execution(* StringOperations.getCapStr(..))")
+	public void uppercut(){}
+	
+	@Pointcut("execution(* StringOperations.getLowerStr(..))"  )
+	public void lowercut(){}
+	
+	@AfterThrowing(pointcut = "lowercut()", throwing="ex")
+	public void getExcep(JoinPoint joinPoint,Exception ex){
+		org.aspectj.lang.Signature signature = joinPoint.getSignature();
+		String methodName = signature.getName();
+		System.out.println("Exception " + ex+" thrown for method ,"+methodName);
+	}
+}

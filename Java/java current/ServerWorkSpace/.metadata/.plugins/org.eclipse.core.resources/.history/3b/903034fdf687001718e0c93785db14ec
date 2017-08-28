@@ -1,0 +1,9 @@
+package com.bean;
+
+public class ShopBean {
+private ArrayList<String> books=null;
+	public void addBooks(String books[]){
+		this.books = books;
+	}
+	public 
+}

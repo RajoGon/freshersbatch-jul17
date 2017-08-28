@@ -1,0 +1,17 @@
+package com.springtest;
+
+public class StringOperations  throws Exception {
+	public String getCapStr(String str){
+		str = str.toUpperCase();
+		return str;
+	}
+	public String getLowerStr(String str){
+		str=null;
+		str = str.toLowerCase();
+		return str;
+	}
+	public int getLength(String str){
+		
+		return str.length();
+	}
+}

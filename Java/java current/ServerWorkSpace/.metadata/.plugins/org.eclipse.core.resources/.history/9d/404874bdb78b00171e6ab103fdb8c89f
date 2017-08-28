@@ -1,0 +1,20 @@
+package com.springtest;
+
+import org.aspectj.lang.annotation.AfterThrowing;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
+
+@Aspect
+public class StringAspect{
+	
+	@Pointcut("execution(* StringOperations.getUpper(..))")
+	public void uppercut(){}
+	
+	@Pointcut("com.springtest.StringOperations.getLowerStr()" , throwing="ex" )
+	public void lowercut(){}
+	
+	@AfterThrowing("lowercut()")
+	public void getExcep(Exception ex){
+		System.out.println("Exception thrown, "  + ex);
+	}
+}

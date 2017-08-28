@@ -1,0 +1,15 @@
+package com.springtest;
+
+import java.util.ArrayList;
+import java.util.Vector;
+
+public class AddToVectorAndList {
+	ArrayList<Integer> list = new ArrayList<>();
+	Vector<Integer> v = new Vector<>();
+	public void addInVector(){
+		
+	}
+	public void addInList(){
+		
+	}
+}

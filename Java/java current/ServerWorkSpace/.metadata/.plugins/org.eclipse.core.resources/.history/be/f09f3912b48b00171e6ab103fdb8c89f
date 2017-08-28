@@ -1,0 +1,8 @@
+package com.springtest;
+
+public class StringOperations {
+	public String getCapStr(String str){
+		str = str.toUpperCase();
+		return str;
+	}
+}

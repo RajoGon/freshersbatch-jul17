@@ -1,0 +1,27 @@
+package com.springtest;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
+
+@Aspect
+public class UserAspect {
+
+	@Pointcut("execution(* User.login(..))" )
+	public void login(){}
+	
+	@Pointcut("execution(* User.logout(..))" )
+	public void logout(){}
+	
+	@Pointcut("execution(* User.register(..))" )
+	public void register(){}
+	
+	
+	@Around("login()")
+	public void loginUser(ProceedingJoinPoint joinPoint){
+		Object args[]= joinPoint.getArgs();
+	}
+	
+}
