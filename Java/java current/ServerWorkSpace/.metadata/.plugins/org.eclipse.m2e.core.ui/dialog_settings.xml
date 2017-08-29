@@ -56,12 +56,14 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.springtest.springmongo"/>
 			<item value="com.springtest.Springtest"/>
 		</list>
 		<list key="groupId">
 			<item value="com.springtest"/>
 		</list>
 		<list key="artifactId">
+			<item value="springmongo"/>
 			<item value="Springtest"/>
 		</list>
 		<list key="projectNameTemplate">

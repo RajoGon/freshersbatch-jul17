@@ -1,0 +1,5 @@
+package com.springtest.springmongo.entity;
+
+public class User {
+
+}

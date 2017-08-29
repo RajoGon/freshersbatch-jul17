@@ -1,0 +1,5 @@
+package com.springmongo.service;
+
+public interface ItemService {
+	public List<ItemCollection> getAllCategories();
+}

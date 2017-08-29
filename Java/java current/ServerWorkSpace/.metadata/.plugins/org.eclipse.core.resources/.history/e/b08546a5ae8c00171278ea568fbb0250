@@ -1,0 +1,30 @@
+package com.springmongo.dao;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.springmongo.collection.ActionCollection;
+import com.springmongo.collection.AdvertisementCollection;
+import com.springmongo.collection.ItemCollection;
+import com.springmongo.entity.Advertisement;
+import com.springmongo.repository.ActionRepository;
+import com.springmongo.repository.AdvertisementRepository;
+import com.springmongo.repository.ItemRepository;
+
+
+public class AdvertisementDaoImplementation implements AdvertisementDao{
+	@Autowired
+	AdvertisementRepository advertisementRepository;
+
+	public AdvertisementCollection createuser(Advertisement advertisement) {
+
+		return null;
+	}
+
+	
+	
+
+}

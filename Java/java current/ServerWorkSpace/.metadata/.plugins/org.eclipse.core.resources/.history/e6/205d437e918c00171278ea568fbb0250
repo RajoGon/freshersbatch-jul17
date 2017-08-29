@@ -1,0 +1,13 @@
+package com.springmongo.collection;
+
+import org.springframework.data.annotation.Id;
+
+public class UserLoginCollection {
+	@Id
+	String id;
+	String userName;
+
+	
+
+	
+}

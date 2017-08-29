@@ -1,0 +1,43 @@
+package com.springmongo.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.springmongo.collection.UserCollection;
+import com.springmongo.collection.UserLoginCollection;
+import com.springmongo.entity.User;
+import com.springmongo.entity.UserLogin;
+import com.springmongo.repository.UserLoginRepository;
+import com.springmongo.repository.UserRepository;
+
+public class UserDaoImplementation implements UserDao{
+	@Autowired
+	UserRepository userRepository;
+	UserLoginRepository userLoginRepository;
+	public UserCollection createuser(User user) {
+		System.out.println("in dao");
+		UserCollection userCollection = new UserCollection();
+		userCollection.setFirstName(user.getFirstName());
+		userCollection.setLastName(user.getLastName());
+		userCollection.setUserName(user.getUserName());
+		userCollection.setPassword(user.getPassword());
+		userCollection.setEmail(user.getEmail());
+		userCollection.setPhone(user.getPhone());
+		System.out.println(userCollection);
+		userRepository.save(userCollection);
+		return userCollection;
+	}
+	public UserLoginCollection loginUser(UserLogin userLogin) {
+		System.out.println("in dao");
+		UserCollection userCollection = userRepository.getUserByUsername(userLogin);
+		System.out.println("found, "+userCollection);
+		UserLoginCollection userLoginCollection = new UserLoginCollection();		
+
+			
+			userLoginCollection.setUserName(userCollection.getUserName());
+			System.out.println(userLoginCollection);
+			userLoginRepository.save(userLoginCollection);
+			return userLoginCollection;
+
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.springmongo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.springmongo.dao.UserDao;
+import com.springmongo.entity.User;
+
+public interface UserService {
+	public User createUser(User user);
+}

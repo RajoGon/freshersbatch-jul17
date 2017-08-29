@@ -1,0 +1,15 @@
+package com.springtest.springmongo.entity;
+
+public class User {
+	private String uname;
+	private String password;
+	private String fname;
+	public User(){}
+	public User(String uname, String password, String fname) {
+		super();
+		this.uname = uname;
+		this.password = password;
+		this.fname = fname;
+	}
+	
+}

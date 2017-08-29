@@ -1,0 +1,7 @@
+package com.springmongo.collection;
+
+public class UserLoginCollection {
+	String id;
+	String userName;
+	
+}

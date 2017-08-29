@@ -1,0 +1,9 @@
+package com.springmongo.repository;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+import com.springmongo.collection.UserCollection;
+
+public class ItemRepository extends MongoRepository<ItemCollection, String>{
+
+}

@@ -1,0 +1,11 @@
+package com.springmongo.dao;
+
+import java.util.List;
+
+import com.springmongo.collection.ItemCollection;
+import com.springmongo.collection.UserCollection;
+import com.springmongo.entity.User;
+
+public interface ItemDao {
+	public List<ItemCollection> getAllCategories();
+}

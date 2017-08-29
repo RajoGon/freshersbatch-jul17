@@ -1,0 +1,11 @@
+package com.springtest.springmongo;
+
+@SpringBootApplication
+@ImportResource(value="beanconfig.xml")
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+    }
+}

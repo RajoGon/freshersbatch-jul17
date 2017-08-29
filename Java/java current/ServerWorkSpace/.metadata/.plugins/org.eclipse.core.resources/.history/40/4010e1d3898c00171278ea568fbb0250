@@ -1,0 +1,29 @@
+package com.springmongo.collection;
+
+public class UserLoginCollection {
+	String authtoken;
+	String userName;
+
+	public String getAuthtoken() {
+		return authtoken;
+	}
+
+	public void setAuthtoken(String authtoken) {
+		this.authtoken = authtoken;
+	}
+
+	public UserLoginCollection(){}
+
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public UserLoginCollection(String id, String userName) {
+		super();
+		this.id = id;
+		this.userName = userName;
+	}
+	
+}

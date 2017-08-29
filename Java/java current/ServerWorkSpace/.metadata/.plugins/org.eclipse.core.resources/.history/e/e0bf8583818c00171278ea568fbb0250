@@ -1,0 +1,15 @@
+package com.springmongo.collection;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection="users")
+public class UserCollection {
+	@Id
+	private int id;
+	private String firstName;
+	private String lastName;
+	private String userName;
+	private String password;
+	private String email;
+	private int phone;
+}

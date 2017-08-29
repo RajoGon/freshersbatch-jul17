@@ -1,0 +1,5 @@
+package com.springtest.springmongo;
+
+public class WebConfig {
+
+}

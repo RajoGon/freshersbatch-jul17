@@ -1,0 +1,9 @@
+package com.springmongo.service;
+
+import java.util.List;
+
+import com.springmongo.collection.ItemCollection;
+
+public interface ItemService {
+	public List<ItemCollection> getAllCategories();
+}

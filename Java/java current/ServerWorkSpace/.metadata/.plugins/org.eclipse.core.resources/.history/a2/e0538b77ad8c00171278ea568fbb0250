@@ -1,0 +1,17 @@
+package com.springmongo.entity;
+
+public class Advertisement {
+	String name;
+	String title;
+	String description;
+	String category;
+	public Advertisement(){}
+	public Advertisement(String name, String title, String description, String category) {
+		super();
+		this.name = name;
+		this.title = title;
+		this.description = description;
+		this.category = category;
+	}
+	
+}

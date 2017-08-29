@@ -1,0 +1,11 @@
+package com.springmongo.collection;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection="Advertisements")
+public class AdvertisementCollection {
+	String id;
+	String name;
+	String title;
+	String 
+}

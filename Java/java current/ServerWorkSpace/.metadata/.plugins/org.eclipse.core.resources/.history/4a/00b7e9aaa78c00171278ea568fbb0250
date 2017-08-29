@@ -1,0 +1,8 @@
+package com.springmongo.collection;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection="Items")
+public class ItemCollection {
+
+}

@@ -1,0 +1,33 @@
+package com.springmongo.dao;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+
+
+import com.springmongo.collection.ItemCollection;
+import com.springmongo.repository.ItemRepository;
+
+
+public class ItemDaoImplementation implements ItemDao{
+	@Autowired
+	ItemRepository itemRepository;
+	public List<ItemCollection> getAllCategories() {
+		
+		List<ItemCollection> itemsTemp = itemRepository.findAll();
+		ArrayList<ItemCollection> items = new ArrayList<ItemCollection>();
+		if(items!=null){
+			System.out.println(items.get(0).getName());
+			return items;
+		}else{
+			return null;
+		}
+		
+	}
+	
+	
+
+}

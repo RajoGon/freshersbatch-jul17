@@ -1,0 +1,13 @@
+package com.springmongo.repository;
+
+import java.util.List;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.Query;
+
+import com.springmongo.collection.UserCollection;
+
+
+public class UserRepository extends MongoRepository<UserCollection, String>{
+
+}

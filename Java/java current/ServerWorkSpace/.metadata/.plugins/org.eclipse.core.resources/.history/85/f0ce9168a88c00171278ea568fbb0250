@@ -1,0 +1,24 @@
+package com.springmongo.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.springmongo.collection.ItemCollection;
+import com.springmongo.collection.UserCollection;
+import com.springmongo.collection.UserLoginCollection;
+import com.springmongo.dao.ItemDao;
+import com.springmongo.dao.UserDao;
+import com.springmongo.entity.User;
+import com.springmongo.entity.UserLogin;
+
+public class ItemServiceImplementation implements ItemService{
+@Autowired
+ItemDao itemDao;
+
+public List<ItemCollection> getAllCategories() {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+}

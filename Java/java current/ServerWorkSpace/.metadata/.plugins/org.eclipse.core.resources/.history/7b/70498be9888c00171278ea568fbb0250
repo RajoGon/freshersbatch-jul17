@@ -1,0 +1,8 @@
+package com.springmongo.service;
+
+import com.springmongo.collection.UserCollection;
+import com.springmongo.entity.User;
+
+public interface UserService {
+	public UserCollection createUser(User user);
+}

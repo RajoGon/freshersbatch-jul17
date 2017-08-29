@@ -1,0 +1,20 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/data/mongo
+http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd">
+
+<mongo:mongo host="localhost" port="27017" />
+	<mongo:db-factory dbname="advertisement" />
+	<bean id="userService" class="com.springmongo.service.UserServiceImplementation"></bean>
+	<bean id="userDao" class="com.springmongo.dao.UserDaoImplementation"></bean>
+	
+	<bean id="itemService" class="com.springmongo.service.ItemServiceImplementation"></bean>
+	<bean id="itemDao" class="com.springmongo.dao.ItemDaoImplementation"></bean>
+	
+	<bean id="actionService" class="com.springmongo.service.ActionServiceImplementation"></bean>
+	<bean id="actionDao" class="com.springmongo.dao.ActionDaoImplementation"></bean>
+	
+</beans>

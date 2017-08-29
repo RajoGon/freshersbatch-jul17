@@ -1,0 +1,7 @@
+package com.springmongo.collection;
+
+
+@Document(collection="users")
+public class UserCollection {
+
+}

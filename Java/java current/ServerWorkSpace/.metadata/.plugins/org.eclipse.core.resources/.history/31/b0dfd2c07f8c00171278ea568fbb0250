@@ -1,0 +1,14 @@
+package com.springmongo.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.springmongo.entity.User;
+
+public class UserDao {
+@Autowired
+UserRepository userRepo;
+	public User createuser(User user) {
+		return null;
+	}
+
+}

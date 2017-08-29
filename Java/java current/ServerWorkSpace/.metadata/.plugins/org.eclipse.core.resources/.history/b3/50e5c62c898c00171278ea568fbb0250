@@ -1,0 +1,9 @@
+package com.springmongo.dao;
+
+import com.springmongo.collection.UserCollection;
+import com.springmongo.entity.User;
+
+public interface UserDao {
+	public UserCollection createuser(User user);
+	public UserLogin loginUser(UserLogin userLogin);
+}

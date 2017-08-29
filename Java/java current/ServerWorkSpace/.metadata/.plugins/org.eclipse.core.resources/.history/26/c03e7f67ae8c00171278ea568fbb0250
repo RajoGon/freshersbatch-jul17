@@ -1,0 +1,32 @@
+package com.springmongo.dao;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.springmongo.collection.ActionCollection;
+import com.springmongo.collection.ItemCollection;
+import com.springmongo.repository.ActionRepository;
+import com.springmongo.repository.ItemRepository;
+
+
+public class AdvertisementDaoImplementation implements ActionDao{
+	@Autowired
+	ActionRepository actionRepository;
+	public ArrayList<ActionCollection> getAllActions() {
+		
+		ArrayList<ActionCollection> actions = (ArrayList<ActionCollection>) actionRepository.findAll();
+		if(actions!=null){
+			return actions;
+		}else{
+			return null;
+		}
+		
+	}
+
+	
+	
+
+}

@@ -1,0 +1,10 @@
+package com.springmongo.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.springmongo.collection.ItemCollection;
+
+public interface ActionService {
+	public ArrayList<ItemCollection> getAllCategories();
+}

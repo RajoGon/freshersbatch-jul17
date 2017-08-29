@@ -1,0 +1,28 @@
+package com.springmongo.dao;
+
+import java.net.UnknownHostException;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.MongoDbFactory;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.BasicQuery;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
+
+import com.mongodb.MongoClient;
+import com.springmongo.collection.ItemCollection;
+import com.springmongo.repository.ItemRepository;
+
+
+public class ItemDaoImplementation implements ItemDao{
+	@Autowired
+	ItemRepository itemRepository;
+	public String getAllCategories() {
+		List<ItemCollection> items = itemRepository.findAll();
+		return null;
+	}
+	
+	
+
+}
