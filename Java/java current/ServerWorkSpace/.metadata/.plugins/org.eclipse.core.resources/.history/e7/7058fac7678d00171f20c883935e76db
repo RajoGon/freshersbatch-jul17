@@ -1,0 +1,53 @@
+package com.springtest.hibernate;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.SQLQuery;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.springtest.hibernate.entity.Product;
+
+/**
+ * Hello world!
+ *
+ */
+public class App2 
+{
+    public static void main( String[] args )
+    {
+    	//Configure hibernate by reading config file
+    	Configuration config=new Configuration();
+    	config.configure("hibernate.cfg.xml");
+    	//Create a session factory object through configured object
+    	SessionFactory sessionFactory = config.buildSessionFactory();
+    	insert(sessionFactory);
+    	getAll(sessionFactory);
+//    	update(sessionFactory);
+//    	getAll(sessionFactory);
+//    	findSpecific(sessionFactory);
+//    	deleteData(sessionFactory);
+    }
+    
+    public static void insert(SessionFactory sessionFactory){
+    
+    public static void getAll(SessionFactory sessionFactory){
+    	//Different queries
+    	Session session = sessionFactory.openSession();
+    	Transaction tobj = session.beginTransaction();
+    	Query query = session.createQuery("from Product");
+    	List<Product> products = query.list();
+    	products.stream().forEach(System.out::println);
+    	//Commit and close
+    	tobj.commit();
+    	session.close();
+    	System.out.println("Data found Successfully");
+    }
+    
+    
+    public static void update(SessionFactory sessionFactory){
+    
+}

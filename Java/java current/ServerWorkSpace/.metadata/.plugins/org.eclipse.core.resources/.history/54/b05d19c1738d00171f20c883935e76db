@@ -1,0 +1,149 @@
+package com.springtest.hibernate;
+
+import java.util.List;
+
+import org.hibernate.Cache;
+import org.hibernate.Query;
+import org.hibernate.SQLQuery;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.springtest.hibernate.entity.Employee;
+import com.springtest.hibernate.entity.Product;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	//Configure hibernate by reading config file
+    	Configuration config=new Configuration();
+    	config.configure("hibernate.cfg.xml");
+    	//Create a session factory object through configured object
+    	SessionFactory sessionFactory = config.buildSessionFactory();
+   // 	insert(sessionFactory);
+ //   	getAll(sessionFactory);
+//    	update(sessionFactory);
+//    	getAll(sessionFactory);
+//    	findSpecific(sessionFactory);
+//    	deleteData(sessionFactory);
+    	getTotalSal(sessionFactory);
+    	sessionFactory.close();
+    }
+    
+    public static void insert(SessionFactory sessionFactory){
+    	//Different queries
+    	Session session = sessionFactory.openSession();
+    	Transaction tobj = session.beginTransaction();
+    	Product p1 = new Product("Laptop", 1000);
+    	session.save(p1);	
+    	tobj.commit();
+    	session.close();
+    	
+    	session = sessionFactory.openSession();
+    	tobj = session.beginTransaction();
+    	Product p2 = new Product("TV", 2000);
+    	session.save(p2);
+    	tobj.commit();
+    	session.close();
+    	
+    	session = sessionFactory.openSession();
+    	tobj = session.beginTransaction();
+    	Product p3 = new Product("M", 7000);
+    	session.save(p3);
+    	tobj.commit();
+    	session.close();
+    	
+    	session = sessionFactory.openSession();
+    	tobj = session.beginTransaction();
+    	SQLQuery query = session.createSQLQuery("INSERT INTO PRODUCT_MASTER(P_ID,NAME,COST) VALUES(newseq.nextval,'AC',20000)");
+    	query.executeUpdate();
+    	tobj.commit();
+    	session.close();
+    	
+    	System.out.println("Data inserted Successfully");
+    }
+    
+    
+    public static void getAll(SessionFactory sessionFactory){
+    	//Different queries
+    	Session session = sessionFactory.openSession();
+    	Transaction tobj = session.beginTransaction();
+    	Query query = session.createQuery("from Product");
+    	List<Product> products = query.list();
+    	products.stream().forEach(System.out::println);
+    	//Commit and close
+    	tobj.commit();
+    	session.close();
+    	System.out.println("Data found Successfully");
+    }
+    
+    
+    public static void update(SessionFactory sessionFactory){
+    	//Different queries
+    	Session session = sessionFactory.openSession();
+    	Transaction tobj = session.beginTransaction();
+    	Product p = session.load(Product.class, 2L);
+    	p.setName("UpdatedTV");
+    	//Commit and close
+    	tobj.commit();
+    	session.close();
+    	System.out.println("Data updated Successfully");
+    }
+    
+    public static void deleteData(SessionFactory sessionFactory){
+    	//Different queries
+    	Session session = sessionFactory.openSession();
+    	Transaction tobj = session.beginTransaction();
+    	Product p = session.load(Product.class, 2L);
+    	session.delete(p);
+    	//Commit and close
+    	tobj.commit();
+    	session.close();
+    	System.out.println("Data deleted Successfully");
+    }
+    
+    
+    public static void findSpecific(SessionFactory sessionFactory){
+    	//Different queries
+    	Session session = sessionFactory.openSession();
+    	Transaction tobj = session.beginTransaction();
+    	Query query = session.createQuery("from Product where name= :name");
+    	query.setString("name", "Laptop");
+    	Product p = (Product) query.uniqueResult();
+    	System.out.println(p);
+    	//Commit and close
+    	tobj.commit();
+    	session.close();
+    	System.out.println("LAPTOP FOUND Successfully");
+    }
+    public static void getTotalSal(SessionFactory sessionFactory){
+    	//Different queries
+    	Session session = sessionFactory.openSession();
+    	Transaction tobj = session.beginTransaction();
+    	Cache cache = sessionFactory.getCache();
+    	session.clear();
+    	cache.evictAllRegions();
+    	
+    	Query query = session.createQuery("Select sum(salary) from Employee ");
+    	String sum = (String) query.uniqueResult();
+    	List sum1 = query.list();
+    	System.out.println("Total sal = "+sum1);
+    	Query query2 = session.createQuery(" from Employee order by salary ");
+    	System.out.println("Odered "+query2.list());
+    	
+    	Query query3 = session.createQuery("Select city,sum(salary) from Employee group by city ");
+    	List<Product> group = query3.list();
+    	System.out.println("City Group "+query3.list().get(0));
+    	//Commit and close
+    	tobj.commit();
+    	session.close();
+    	System.out.println("Data found Successfully");
+    }
+    
+}

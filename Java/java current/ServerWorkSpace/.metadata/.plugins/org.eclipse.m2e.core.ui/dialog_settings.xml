@@ -44,6 +44,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\main\java\com\springmongo\service\UserServiceImplementation.java"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -56,6 +57,7 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.springtest.hibernate"/>
 			<item value="com.springtest.springmongo"/>
 			<item value="com.springtest.Springtest"/>
 		</list>
@@ -63,6 +65,7 @@
 			<item value="com.springtest"/>
 		</list>
 		<list key="artifactId">
+			<item value="hibernate"/>
 			<item value="springmongo"/>
 			<item value="Springtest"/>
 		</list>
