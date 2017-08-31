@@ -1,0 +1,79 @@
+package com.springtest.hibernate.entity.mapstock;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name="MARKET")
+public class Market {
+	@Id
+	@GeneratedValue
+	@Column(name="mid")
+	private long id;
+	@Column(name="city")
+	private String city;
+	@Column(name="name")
+	private String name;
+	
+	@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.EAGER, mappedBy="market")
+	private Map<Long,Stock> stocks;
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Map<Long, Stock> getStocks() {
+		return stocks;
+	}
+
+	public void setStocks(Map<Long, Stock> stockm1) {
+		this.stocks = stockm1;
+	}
+
+	public Market() {
+		super();
+	}
+
+	public Market(String city, String name, HashMap<Long, Stock> stocks) {
+		super();
+		this.city = city;
+		this.name = name;
+		this.stocks = stocks;
+	}
+
+	public Market(String city, String name) {
+		super();
+		this.city = city;
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "Market [id=" + id + ", city=" + city + ", name=" + name + "]";
+	}
+	
+	
+}

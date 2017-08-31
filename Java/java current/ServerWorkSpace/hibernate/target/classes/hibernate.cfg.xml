@@ -15,10 +15,21 @@
 		<property name="show_sql">true</property>
 		<property name="hbm2ddl.auto">create</property> 
 		<!-- validate | update | create | create-drop -->
-		<mapping class="com.springtest.hibernate.entity.onetomany.EmployeeManager"/>
+		<mapping class="com.springtest.hibernate.entity.tablepersubclass.Bike"/>
+		<mapping class="com.springtest.hibernate.entity.tablepersubclass.Car"/>
+
 
 </session-factory>
 <!-- 	
+		<mapping class="com.springtest.hibernate.entity.mapstock.Market"/>
+		<mapping class="com.springtest.hibernate.entity.mapstock.Stock"/>
+		<mapping class="com.springtest.hibernate.entity.tableperclass.Vehicle"/>
+		<mapping class="com.springtest.hibernate.entity.tableperclass.Bike"/>
+		<mapping class="com.springtest.hibernate.entity.tableperclass.Car"/>
+		<mapping class="com.springtest.hibernate.entity.tablepersubclass.Vehicle"/>
+		<mapping class="com.springtest.hibernate.entity.tablepersubclass.Bike"/>
+		<mapping class="com.springtest.hibernate.entity.tablepersubclass.Car"/>
+		<mapping class="com.springtest.hibernate.entity.onetomany.EmployeeManager"/>
 		<mapping class="com.springtest.hibernate.entity.manytomany.MyStudent"/>
 		<mapping class="com.springtest.hibernate.entity.manytomany.MyCourse"/>	
 		<mapping class="com.springtest.hibernate.entity.Product"/>

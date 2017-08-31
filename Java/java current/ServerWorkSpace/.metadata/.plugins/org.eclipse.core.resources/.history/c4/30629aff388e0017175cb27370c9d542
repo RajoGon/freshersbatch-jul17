@@ -1,0 +1,11 @@
+package com.springtest.hibernate.entity.singletable;
+
+import javax.persistence.*;
+
+@Entity
+
+public class Vehicle {
+	private long id;
+	private String colour;
+	
+}

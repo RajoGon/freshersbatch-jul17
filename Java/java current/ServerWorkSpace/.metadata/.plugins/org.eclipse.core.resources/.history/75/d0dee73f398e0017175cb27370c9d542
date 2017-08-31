@@ -1,0 +1,9 @@
+package com.springtest.hibernate.entity.singletable;
+
+import javax.persistence.Column;
+import javax.persistence.DiscriminatorValue;
+@DiscriminatorValue(value="bike")
+public class Bike extends Vehicle {
+	@Column(name="torque")
+	private String torque;
+}

@@ -1,0 +1,44 @@
+package com.springtest.hibernate.entity.tablepersubclass;
+
+import javax.persistence.*;
+@Entity
+@Table(name="Bike")
+@PrimaryKeyJoinColumn(name="id")
+public class Bike extends Vehicle {
+	@Column(name="torque")
+	private String torque;
+
+	public String getTorque() {
+		return torque;
+	}
+
+	public void setTorque(String torque) {
+		this.torque = torque;
+	}
+
+	public Bike(long id, String colour, String torque) {
+		super(id, colour);
+		this.torque = torque;
+	}
+	public Bike(String colour, String torque) {
+		super(colour);
+		this.torque = torque;
+	}
+//	public Bike( String torque) {
+//		super();
+//		this.torque = torque;
+//	}
+
+	public Bike(long id, String colour) {
+		super(id, colour);
+	}
+
+	@Override
+	public String toString() {
+		return "Bike [torque=" + torque + "]";
+	}
+	
+	
+	
+	
+}

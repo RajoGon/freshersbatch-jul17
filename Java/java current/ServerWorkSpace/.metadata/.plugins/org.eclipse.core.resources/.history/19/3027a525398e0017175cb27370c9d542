@@ -1,0 +1,15 @@
+package com.springtest.hibernate.entity.singletable;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name="Vehicles")
+@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+public class Vehicle {
+	@Id
+	@GeneratedValue
+	@Column(name="vid")
+	private long id;
+	private String colour;
+	
+}

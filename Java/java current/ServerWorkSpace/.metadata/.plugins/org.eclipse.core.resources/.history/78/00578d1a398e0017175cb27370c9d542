@@ -1,0 +1,5 @@
+package com.springtest.hibernate.entity.singletable;
+
+public class Bike extends Vehicle {
+	private String torque;
+}

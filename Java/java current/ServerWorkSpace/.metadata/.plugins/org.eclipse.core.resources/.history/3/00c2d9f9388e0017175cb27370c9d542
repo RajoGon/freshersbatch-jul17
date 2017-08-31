@@ -1,0 +1,7 @@
+package com.springtest.hibernate.entity.singletable;
+
+public class Vehicle {
+	private long id;
+	private String colour;
+	
+}

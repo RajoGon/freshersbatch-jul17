@@ -1,0 +1,8 @@
+package com.springtest.hibernate.entity.singletable;
+
+import javax.persistence.Column;
+
+public class Bike extends Vehicle {
+	@Column(name="torque")
+	private String torque;
+}

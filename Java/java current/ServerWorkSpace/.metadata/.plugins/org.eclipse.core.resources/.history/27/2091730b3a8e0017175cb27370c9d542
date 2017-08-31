@@ -1,0 +1,84 @@
+package com.springtest.hibernate;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+
+import com.springtest.hibernate.entity.onetoone.Employee;
+import com.springtest.hibernate.entity.onetoone.Profile;
+import com.springtest.hibernate.entity.singletable.*;
+public class HibernateInheritance {
+	static Long empid;
+	static Long empidToDelete;
+	public static void main(String[] args) {
+		//1.	Perform CRUD operations on tables having 1-1 mapping i.e. Employee & Profile.
+		Configuration config=new Configuration();
+    	config.configure("hibernate.cfg.xml");
+    	SessionFactory sessionFactory = config.buildSessionFactory();
+    	//Create
+    	create(sessionFactory);
+    	//Retreive
+    	//retreive(sessionFactory);
+    	//Update
+    	//update(sessionFactory);
+    	//Delete
+    	//delete(sessionFactory);
+    	
+    	
+    	
+    	sessionFactory.close();
+	}
+    public static void create(SessionFactory sessionFactory){
+    	//Different queries
+    	Vehicle v1 = new Vehicle("Red");
+    	Car c1 = new Car("Honda");
+    	Bike b1 = new Bike("100HP");
+    	Session session = sessionFactory.openSession();
+    	Transaction tobj = session.beginTransaction();
+    	session.persist(v1);
+    	session.persist(c1);
+    	session.persist(b1);
+    	tobj.commit();
+
+    	session.close();	
+    	System.out.println("Vehicle,car and bike inserted Successfully");
+    }
+    public static void retreive(SessionFactory sessionFactory){
+    	//Different queries
+    	
+    	Session session = sessionFactory.openSession();
+    	Transaction tobj = session.beginTransaction();
+    	Employee e_find = session.load(Employee.class, empid);
+    	System.out.println(e_find);
+    	tobj.commit();
+    	session.close();	
+    	System.out.println("Employee found Successfully");
+    }
+    public static void update(SessionFactory sessionFactory){
+    	//Different queries
+    	
+    	Session session = sessionFactory.openSession();
+    	Transaction tobj = session.beginTransaction();
+    	Employee e_find = session.load(Employee.class, empid);
+    	e_find.setName("Rajorshi");
+    	tobj.commit();
+    	session.close();	
+    	System.out.println("Employee updated Successfully");
+    }
+    
+    public static void delete(SessionFactory sessionFactory){
+    	//Different queries
+    	
+    	Session session = sessionFactory.openSession();
+    	Transaction tobj = session.beginTransaction();
+    	Employee e_find = session.load(Employee.class, empidToDelete);
+    	session.delete(e_find);
+    	tobj.commit();
+    	session.close();	
+    	System.out.println("Employee deleted Successfully");
+    }
+}
