@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.hibernate</groupId>
-  <artifactId>1_N</artifactId>
+  <artifactId>HB_CRUD</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>1_N</name>
+  <name>HB_CRUD</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -62,7 +62,6 @@
     <version>5.1.0.Final</version>
 </dependency>  
 
-<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 <dependency>
     <groupId>mysql</groupId>
     <artifactId>mysql-connector-java</artifactId>
@@ -73,9 +72,9 @@
     <artifactId>ojdbc</artifactId>
     <version>14</version>
     <scope>system</scope>
-    <systemPath>D:/ojdbc6.jar</systemPath> <!-- must match file name -->
+    <systemPath>E:/Anand/Training/Master/Hibernate/ojdbc6.jar</systemPath> <!-- must match file name -->
 </dependency>
-
+   
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
