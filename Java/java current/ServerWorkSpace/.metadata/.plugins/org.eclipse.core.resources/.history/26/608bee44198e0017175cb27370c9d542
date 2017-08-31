@@ -1,0 +1,66 @@
+package com.springtest.hibernate.entity.onetomany;
+
+import java.util.Set;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name="MARKET")
+public class Market {
+	@Id
+	@GeneratedValue(strategy=GenerationType.TABLE)
+	@Column(name="mid")
+	private long id;
+	@Column(name="city")
+	private String city;
+	@Column(name="name")
+	private String name;
+	
+	@OneToMany(cascade=CascadeType.REMOVE, fetch=FetchType.EAGER, mappedBy="market")
+	private Set<Stock> stocks;
+	
+	public Market(String city, String name, Set<Stock> stocks) {
+		super();
+		this.city = city;
+		this.name = name;
+		this.stocks = stocks;
+	}
+	public Set<Stock> getStocks() {
+		return stocks;
+	}
+	public void setStocks(Set<Stock> stocks) {
+		this.stocks = stocks;
+	}
+	public Market(long id, String city, String name, Set<Stock> stocks) {
+		super();
+		this.id = id;
+		this.city = city;
+		this.name = name;
+		this.stocks = stocks;
+	}
+	public Market(){}
+	public Market(String city, String name) {
+		super();
+		this.city = city;
+		this.name = name;
+	}
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+}

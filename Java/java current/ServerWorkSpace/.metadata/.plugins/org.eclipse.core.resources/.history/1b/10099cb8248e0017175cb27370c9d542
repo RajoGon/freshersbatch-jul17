@@ -1,0 +1,73 @@
+package com.springtest.hibernate.entity.manytomany;
+
+import java.util.Set;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name="STUDENT")
+public class MyStudent {
+	@Id
+	@GeneratedValue
+	private long sid;
+	@Column(name="sname")
+	private String Name;
+	@Column(name="sage")
+	private String age;
+	
+	@ManyToMany(cascade = CascadeType.ALL)
+	@JoinTable(
+			name="Student_Course",
+			joinColumns = @JoinColumn(name="C_ID"),
+			inverseJoinColumns = @JoinColumn(name="S_ID")			
+			)
+	private Set<MyCourse> courseList;
+	
+	
+	
+	
+	
+	public MyStudent(String name, String age, Set<MyCourse> courseList) {
+		super();
+		Name = name;
+		this.age = age;
+		this.courseList = courseList;
+	}
+	public MyStudent(String name, String age) {
+		super();
+		Name = name;
+		this.age = age;
+	}
+	public MyStudent(long sid, String name, String age) {
+		super();
+		this.sid = sid;
+		Name = name;
+		this.age = age;
+	}
+	public MyStudent() {
+		super();
+	}
+	public long getSid() {
+		return sid;
+	}
+	public void setSid(long sid) {
+		this.sid = sid;
+	}
+	public String getName() {
+		return Name;
+	}
+	public void setName(String name) {
+		Name = name;
+	}
+	public String getAge() {
+		return age;
+	}
+	public void setAge(String age) {
+		this.age = age;
+	}
+	@Override
+	public String toString() {
+		return "MyStudent [sid=" + sid + ", Name=" + Name + ", age=" + age + "]";
+	}
+	
+}

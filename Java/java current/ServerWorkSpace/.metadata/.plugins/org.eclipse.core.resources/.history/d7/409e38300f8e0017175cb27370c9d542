@@ -1,0 +1,37 @@
+package com.springtest.hibernate;
+import org.hibernate.Cache;
+import org.hibernate.Criteria;
+import org.hibernate.Query;
+import org.hibernate.SQLQuery;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.criterion.Criterion;
+import org.hibernate.criterion.LogicalExpression;
+import org.hibernate.criterion.Restrictions;
+
+import com.springtest.hibernate.entity.onetoone.Employee;
+import com.springtest.hibernate.entity.onetoone.Profile;
+public class OneToOne {
+	public static void main(String[] args) {
+		//1.	Perform CRUD operations on tables having 1-1 mapping i.e. Customer & Address.
+		Configuration config=new Configuration();
+    	config.configure("hibernate.cfg.xml");
+    	//Create a session factory object through configured object
+    	SessionFactory sessionFactory = config.buildSessionFactory();
+    	insert(sessionFactory);
+    	sessionFactory.close();
+	}
+    public static void insert(SessionFactory sessionFactory){
+    	//Different queries
+    	Profile p1 = new Profile("Xoriant", 1);
+    	Employee e1 = new Employee("Rajo", 34000, p1);
+    	Session session = sessionFactory.openSession();
+    	Transaction tobj = session.beginTransaction();
+    	session.persist(e1);	
+    	tobj.commit();
+    	session.close();	
+    	System.out.println("Employee inserted Successfully");
+    }
+}

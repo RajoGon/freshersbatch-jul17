@@ -1,0 +1,24 @@
+package com.springtest.hibernate.entity.onetomany;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name="EmployeeManager")
+public class EmployeeManager {
+	
+	
+	@Id
+	@GeneratedValue
+	@Column(name="eid")
+	private long eid;
+	@Column(name="ename")
+	private String name;
+	
+	@Column(name="mid")
+	private EmployeeManager mid;
+	
+	
+	private Set<EmployeeManager> underManager = new HashSet<>();}

@@ -1,0 +1,7 @@
+package com.springtest.hibernate.entity.onetomany;
+
+public class Market {
+	private long id;
+	private long price;
+	private long market_id;
+}

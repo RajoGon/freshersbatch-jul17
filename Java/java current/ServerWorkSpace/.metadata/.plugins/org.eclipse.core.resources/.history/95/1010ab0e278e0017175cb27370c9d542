@@ -1,0 +1,106 @@
+package com.springtest.hibernate;
+
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.springtest.hibernate.entity.manytomany.*;
+import com.springtest.hibernate.entity.onetomany.*;
+import com.springtest.hibernate.entity.onetoone.Employee;
+import com.springtest.hibernate.entity.onetoone.Profile;
+public class ManyToMany {
+	static Long cid;
+	static Long cidToDelete;
+	public static void main(String[] args) {
+		//1.	2.	Perform CRUD operations on tables having 1-m mapping i.e. Market & Stock. The entity attributes will be Market (id, name, city) & Stock(id, name, price, market_id). Try all cascade options.
+		Configuration config=new Configuration();
+    	config.configure("hibernate.cfg.xml");
+    	SessionFactory sessionFactory = config.buildSessionFactory();
+    	//Create
+    	create(sessionFactory);
+    	//Retreive
+    	//retreive(sessionFactory);
+    	//Update
+    	//update(sessionFactory);
+    	//Delete
+    	//delete(sessionFactory);
+    	
+    	
+    	
+    	sessionFactory.close();
+	}
+    public static void create(SessionFactory sessionFactory){
+    	//Different queries
+    	MyStudent s1 = new MyStudent("Rajo", "22");
+    	System.out.println(s1);
+    	MyStudent s2 = new MyStudent("Aditya","22");
+    	MyStudent s3 = new MyStudent("Sachin","22");
+    	MyStudent s4 = new MyStudent("Arjun","25");
+    	MyStudent s5 = new MyStudent("Ram","42");
+    	Set<MyStudent> c1 = new HashSet<>();
+    	c1.add(s1);
+    	c1.add(s2);
+    	c1.add(s3);
+    	Set<MyStudent> c2 = new HashSet<>();
+    	c2.add(s4);
+    	c2.add(s5);
+    	MyCourse java = new MyCourse("Java", "1 week", c1);
+    	MyCourse net = new MyCourse(".Net", "2 weeks", c2);
+
+    	Session session = sessionFactory.openSession();
+    	Transaction tobj = session.beginTransaction();
+    	session.persist(java);
+    	session.persist(net);
+    	tobj.commit();
+    	cid= java.getCid();
+    	cidToDelete = net.getCid();
+    	//mid = m1.getId();
+    	//midToDelete = m2.getId();
+    	session.close();	
+    	System.out.println("Course with students inserted Successfully");
+    }
+    public static void retreive(SessionFactory sessionFactory){
+    	//Different queries
+    	
+    	Session session = sessionFactory.openSession();
+    	Transaction tobj = session.beginTransaction();
+    	MyCourse c_find = session.load(MyCourse.class, cid);
+    	System.out.println(c_find);
+    	tobj.commit();
+    	session.close();	
+    	System.out.println("Crouse found Successfully");
+    }
+    public static void update(SessionFactory sessionFactory){
+    	//Different queries
+    	
+    	Session session = sessionFactory.openSession();
+    	Transaction tobj = session.beginTransaction();
+    	MyCourse c_find = session.load(MyCourse.class, cid);
+    	c_find.setCourseDuration("4 weeks");
+    	tobj.commit();
+    	session.close();	
+    	System.out.println("Market updated Successfully");
+    }
+    
+    public static void delete(SessionFactory sessionFactory){
+    	//Different queries
+    	
+    	Session session = sessionFactory.openSession();
+    	Transaction tobj = session.beginTransaction();
+    	Market m_find = session.load(Market.class, cidToDelete);
+    	Stock s_find = m_find.getStocks().stream().collect(Collectors.toList()).get(1);
+    	//System.out.println(s_find);
+    	m_find.getStocks().remove(s_find);
+    	session.delete(s_find);
+    	tobj.commit();
+    	session.close();	
+    	System.out.println("Stock deleted Successfully");
+    }
+}

@@ -1,0 +1,11 @@
+package com.springtest.hibernate.entity.onetomany;
+
+import javax.persistence.*
+
+@Entity
+@Table(name="STUDENT")
+public class EmployeeManager {
+	private long eid;
+	private String name;
+	private long mid;
+}

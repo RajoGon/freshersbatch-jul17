@@ -1,0 +1,49 @@
+package com.springtest.hibernate.entity.onetomany;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+public class Stock {
+	@Id
+	@GeneratedValue
+	@Column(name="sid")
+	private long id;
+	@Column(name="price")
+	private long price;
+	
+	
+	@ManyToOne(cascade=CascadeType.ALL , fetch=FetchType.EAGER)
+	@JoinColumn(name="mid")
+	@Column(name="market_id")
+	private Market market;
+	public Stock(){}
+	public Stock(long price, long market_id) {
+		super();
+		this.price = price;
+		this.market_id = market_id;
+	}
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public long getPrice() {
+		return price;
+	}
+	public void setPrice(long price) {
+		this.price = price;
+	}
+	public long getMarket_id() {
+		return market_id;
+	}
+	public void setMarket_id(long market_id) {
+		this.market_id = market_id;
+	}
+	
+}

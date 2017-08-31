@@ -1,0 +1,72 @@
+package com.springtest.hibernate;
+
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+import org.hibernate.Query;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.springtest.hibernate.entity.onetomany.*;
+import com.springtest.hibernate.entity.onetoone.Employee;
+import com.springtest.hibernate.entity.onetoone.Profile;
+public class SelfJoin {
+	static Long mid;
+	static Long midToDelete;
+	public static void main(String[] args) {
+		//1.4.	Write a program using HQL to find out employees who have been assigned a manager. Create a Employee table & add a column manager_id which is one of the employee’s id. The result should display empId, empName, managerName.	
+		Configuration config=new Configuration();
+    	config.configure("hibernate.cfg.xml");
+    	SessionFactory sessionFactory = config.buildSessionFactory();
+    	//Create
+    	create(sessionFactory);
+    	//Retreive
+    	//ManagerNotNull(sessionFactory);
+    	
+    	
+    	sessionFactory.close();
+	}
+    public static void create(SessionFactory sessionFactory){
+    	//Different queries
+    	EmployeeManager m1 = new EmployeeManager("Anand");
+    	EmployeeManager m2 = new EmployeeManager("Nilesh",m1);
+    	EmployeeManager e1 = new EmployeeManager("Rajo",m1);
+    	EmployeeManager e2 = new EmployeeManager("Aditya",m1);
+    	EmployeeManager e3 = new EmployeeManager("Sachin",m2);
+    	Set<EmployeeManager> underManager = new HashSet<>();
+    	underManager.add(e1);
+    	underManager.add(e2);
+    	underManager.add(e3);
+    	m1.setUnderManager(underManager);
+    	Session session = sessionFactory.openSession();
+    	Transaction tobj = session.beginTransaction();
+    	session.persist(e1);
+    	session.persist(e2);
+    	session.persist(e3);
+    	session.persist(m1);
+    	session.persist(m2);
+    	tobj.commit();
+
+    	session.close();	
+    	System.out.println("Manager with subordinates inserted Successfully");
+    }
+    public static void managerNotNull(SessionFactory sessionFactory){
+    	//Different queries
+    	
+    	Session session = sessionFactory.openSession();
+    	Transaction tobj = session.beginTransaction();
+    	Query query = session.createQuery("from EmployeeManager where manager is not null ");
+    	
+    	tobj.commit();
+    	session.close();	
+    	System.out.println("Market found Successfully");
+    }
+
+
+}

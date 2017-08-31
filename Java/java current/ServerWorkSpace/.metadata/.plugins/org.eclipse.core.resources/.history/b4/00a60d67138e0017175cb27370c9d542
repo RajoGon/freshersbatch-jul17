@@ -1,0 +1,40 @@
+package com.springtest.hibernate.entity.onetomany;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+public class Stock {
+	@Id
+	@GeneratedValue
+	private long id;
+	@Column(name="price")
+	private long price;
+	@Column(name="market_id")
+	private long market_id;
+	public Stock(){}
+	public Stock(long price, long market_id) {
+		super();
+		this.price = price;
+		this.market_id = market_id;
+	}
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public long getPrice() {
+		return price;
+	}
+	public void setPrice(long price) {
+		this.price = price;
+	}
+	public long getMarket_id() {
+		return market_id;
+	}
+	public void setMarket_id(long market_id) {
+		this.market_id = market_id;
+	}
+	
+}

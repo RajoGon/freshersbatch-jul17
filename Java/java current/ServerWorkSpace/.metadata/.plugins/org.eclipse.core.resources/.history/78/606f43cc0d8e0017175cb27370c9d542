@@ -1,0 +1,5 @@
+package com.springtest.hibernate;
+
+public class OneToOneEtc {
+
+}

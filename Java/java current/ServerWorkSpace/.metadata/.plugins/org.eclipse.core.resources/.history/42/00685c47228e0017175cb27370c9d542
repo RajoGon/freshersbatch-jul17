@@ -1,0 +1,5 @@
+package com.springtest.hibernate.entity.manytomany;
+
+public class MyStudent {
+
+}

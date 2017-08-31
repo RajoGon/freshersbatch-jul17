@@ -1,0 +1,7 @@
+package com.springtest.hibernate.entity.onetomany;
+
+public class EmployeeManager {
+	private long eid;
+	private String name;
+	private long mid;
+}
