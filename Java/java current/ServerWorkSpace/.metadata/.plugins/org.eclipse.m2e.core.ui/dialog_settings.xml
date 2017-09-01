@@ -57,6 +57,7 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.springtest.hibernatecaching"/>
 			<item value="com.springtest.hibernate"/>
 			<item value="com.springtest.springmongo"/>
 			<item value="com.springtest.Springtest"/>
@@ -65,6 +66,7 @@
 			<item value="com.springtest"/>
 		</list>
 		<list key="artifactId">
+			<item value="hibernatecaching"/>
 			<item value="hibernate"/>
 			<item value="springmongo"/>
 			<item value="Springtest"/>

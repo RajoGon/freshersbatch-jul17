@@ -1,0 +1,39 @@
+package com.springtest.hibernate;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.springtest.hibernate.entity.Product;
+
+public class HibernateCaching {
+	public static void main(String[] args) {
+		Configuration config=new Configuration();
+    	config.configure("hibernate.cfg.xml");
+    	SessionFactory sessionFactory = config.buildSessionFactory();
+    	create(sessionFactory);
+    	//Retreive
+    	//retreive(sessionFactory);
+    	//Update
+    	//update(sessionFactory);
+    	//Delete
+    	//delete(sessionFactory);
+    	
+    	
+    	
+    	sessionFactory.close();
+	}
+	
+	public static void create(SessionFactory sessionFactory){
+    	//Different queries
+
+    	Session session = sessionFactory.openSession();
+    	Transaction tobj = session.beginTransaction();
+
+    	tobj.commit();
+
+    	session.close();	
+    	System.out.println("Employee inserted Successfully");
+    }
+}
