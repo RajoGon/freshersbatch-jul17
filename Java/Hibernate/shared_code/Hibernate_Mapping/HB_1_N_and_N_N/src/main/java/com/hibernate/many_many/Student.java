@@ -54,8 +54,6 @@ public class Student {
 	}
 
 	@ManyToMany(cascade = CascadeType.ALL)
-			
-			
 	@JoinTable(name = "STUDENT_COURSE", 
 				joinColumns = { @JoinColumn(name = "STUDENT_ID") }, 
 				inverseJoinColumns = { @JoinColumn(name = "COURSE_ID") })
