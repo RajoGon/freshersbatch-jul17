@@ -1,0 +1,43 @@
+package com.springmongo.dao;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
+
+import com.springmongo.collection.ActionCollection;
+import com.springmongo.collection.ItemCollection;
+import com.springmongo.repository.ActionRepository;
+import com.springmongo.repository.ItemRepository;
+
+
+public class ActionDaoImplementation extends HibernateDaoSupport implements ActionDao{
+	@Autowired
+	ActionRepository actionRepository;
+	public ArrayList<ActionCollection> getAllActions(String token) {
+		
+		ArrayList<ActionCollection> actions = (ArrayList<ActionCollection>) actionRepository.findAll();
+		if(actions!=null){
+			return actions;
+		}else{
+			return null;
+		}
+		
+	}
+
+	public boolean verifyToken(String token){
+		org.hibernate.Query q = getHibernateTemplate().getSessionFactory().getCurrentSession().createQuery("Delete from UserLoginCollection where id=:authToken ");
+		q.setParameter("authToken", token);
+		int foundToken = q.executeUpdate();
+		if(foundToken!=0){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	
+	
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;resources&apos;&#x0D;&#x0A;- Original project: &apos;hibernate&apos;&#x0D;&#x0A;- Destination element: &apos;resources&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     hibernate.cfg.xml&#x0D;&#x0A;     ehcache.xml" description="Copy files" element1="src/main/resources/hibernate.cfg.xml" element2="src/main/resources/ehcache.xml" files="2" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1504499803447" target="/springmongo/src/main/resources" units="0" version="1.0"/>
+</session>

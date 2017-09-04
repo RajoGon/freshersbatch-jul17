@@ -1,10 +1,14 @@
 package com.springmongo.service;
 
+import java.util.List;
+
 import com.springmongo.collection.AdvertisementCollection;
 
 import com.springmongo.entity.Advertisement;
 
 
 public interface AdvertisementService {
-	public AdvertisementCollection postAd(Advertisement advertisement, String token);
+	public Advertisement postAd(Advertisement advertisement, String token);
+
+	public List<Advertisement> getAdsByUser(String token);
 }

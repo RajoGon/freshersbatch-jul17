@@ -6,8 +6,8 @@ import com.springmongo.entity.User;
 import com.springmongo.entity.UserLogin;
 
 public interface UserService {
-	public UserCollection createUser(User user);
+	public User createUser(User user);
 	public UserLoginCollection loginUser(UserLogin userLogin);
-	public UserLoginCollection logoutUser(String token);
-	public UserCollection getUser(String uname);
+	public String logoutUser(String token);
+	public User getUser(String uname);
 }

@@ -1,10 +1,97 @@
 package com.springmongo.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Advertisements")
 public class Advertisement {
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Id
+	@Column(name="adId")
+	int id;
+	@Column(name="name")
 	String name;
+	@Column(name="title")
 	String title;
+	@Column(name="description")
 	String description;
+	@Column(name="category")
 	String category;
+	@Column(name="userName")
+	String userName;
+	@Column(name="createdDate")
+	String createdDate;
+
+	public Advertisement(String name, String title, String description, String category, String userName,
+			String createdDate) {
+		super();
+		this.name = name;
+		this.title = title;
+		this.description = description;
+		this.category = category;
+		this.userName = userName;
+		this.createdDate = createdDate;
+	}
+	public Advertisement(int id, String name, String title, String description, String category, String userName,
+			String createdDate) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.title = title;
+		this.description = description;
+		this.category = category;
+		this.userName = userName;
+		this.createdDate = createdDate;
+	}
+	public String getCreatedDate() {
+		return createdDate;
+	}
+	public void setCreatedDate(String createdDate) {
+		this.createdDate = createdDate;
+	}
+	public Advertisement(int id, String name, String title, String description, String category, String userName) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.title = title;
+		this.description = description;
+		this.category = category;
+		this.userName = userName;
+	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public Advertisement(int id, String name, String title, String description, String category) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.title = title;
+		this.description = description;
+		this.category = category;
+	}
+	public Advertisement(String name, String title, String description, String category, String userName) {
+		super();
+		this.name = name;
+		this.title = title;
+		this.description = description;
+		this.category = category;
+		this.userName = userName;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public Advertisement(){}
 	public Advertisement(String name, String title, String description, String category) {
 		super();
@@ -39,9 +126,10 @@ public class Advertisement {
 	}
 	@Override
 	public String toString() {
-		return "Advertisement [name=" + name + ", title=" + title + ", description=" + description + ", category="
-				+ category + "]";
+		return "Advertisement [id=" + id + ", name=" + name + ", title=" + title + ", description=" + description
+				+ ", category=" + category + ", userName=" + userName + "]";
 	}
+	
 	
 	
 }

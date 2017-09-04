@@ -1,0 +1,12 @@
+package com.springmongo.service;
+
+import com.springmongo.collection.AdvertisementCollection;
+
+import com.springmongo.entity.Advertisement;
+
+
+public interface AdvertisementService {
+	public Advertisement postAd(Advertisement advertisement, String token);
+
+	public void getAdsByUser(String token);
+}

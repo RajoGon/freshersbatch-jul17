@@ -1,10 +1,15 @@
 package com.springmongo.collection;
 
-import org.springframework.data.mongodb.core.mapping.Document;
+import javax.persistence.*;
 
-@Document(collection="Items")
+import org.springframework.data.mongodb.core.mapping.Document;
+@Entity
+@Table(name="categories")
 public class ItemCollection {
+	@Id
+	@Column(name="id")
 	String id;
+	@Column(name="name")
 	String name;
 	public ItemCollection(){}
 	public ItemCollection(String id, String name) {

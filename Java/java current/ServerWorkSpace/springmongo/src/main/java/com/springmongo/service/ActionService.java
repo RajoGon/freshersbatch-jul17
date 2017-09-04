@@ -7,5 +7,5 @@ import com.springmongo.collection.ActionCollection;
 import com.springmongo.collection.ItemCollection;
 
 public interface ActionService {
-	public ArrayList<ActionCollection> getAllActions();
+	public ArrayList<ActionCollection> getAllActions(String token);
 }

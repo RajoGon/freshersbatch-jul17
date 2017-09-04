@@ -1,0 +1,47 @@
+package com.springmongo.entity;
+
+public class Advertisement {
+	String name;
+	String title;
+	String description;
+	String category;
+	public Advertisement(){}
+	public Advertisement(String name, String title, String description, String category) {
+		super();
+		this.name = name;
+		this.title = title;
+		this.description = description;
+		this.category = category;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public String getCategory() {
+		return category;
+	}
+	public void setCategory(String category) {
+		this.category = category;
+	}
+	@Override
+	public String toString() {
+		return "Advertisement [name=" + name + ", title=" + title + ", description=" + description + ", category="
+				+ category + "]";
+	}
+	
+	
+}

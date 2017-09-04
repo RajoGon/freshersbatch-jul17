@@ -2,7 +2,8 @@ package com.springmongo.controller;
 
 
 import java.util.Date;
-
+import java.util.List;
+import java.util.Random;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
@@ -10,7 +11,7 @@ import java.util.ArrayList;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,9 +33,12 @@ import com.springmongo.service.AdvertisementService;
 import com.springmongo.service.ItemService;
 import com.springmongo.service.UserService;
 
+
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("")
 public class MainController {
+	static SimpleDateFormat dateFormat = new SimpleDateFormat();
 @Autowired
 UserService userService;
 @Autowired
@@ -49,7 +53,7 @@ AdvertisementService advertisementService;
 @RequestMapping(value="/register", method=RequestMethod.POST,
 consumes=MediaType.APPLICATION_JSON_VALUE,
 produces=MediaType.APPLICATION_JSON_VALUE)	
-	 public @ResponseBody UserCollection registerUser(@RequestBody User user){
+	 public @ResponseBody User registerUser(@RequestBody User user){
 	System.out.println("Controller");
 		return userService.createUser(user);	 
 	 }	
@@ -59,32 +63,33 @@ produces=MediaType.APPLICATION_JSON_VALUE)
 consumes=MediaType.APPLICATION_JSON_VALUE,
 produces=MediaType.APPLICATION_JSON_VALUE)	
 	 public @ResponseBody String  loginUser(@RequestBody UserLogin userLogin){
-	System.out.println("Controller");
+	System.out.println("Controller"+userLogin);
+	JSONObject data = new JSONObject();
 	JSONObject json = new JSONObject();
 	UserLoginCollection userLoginCollection= userService.loginUser(userLogin);	
 		if(userLoginCollection!=null){
-			json.put("auth-token", userLoginCollection.getId());
-			json.put("userName", userLoginCollection.getUserName());
-			SimpleDateFormat dateFormat = new SimpleDateFormat();
-			json.put("lastUpdateDate", dateFormat.format(new Date()) );	
-			return json.toString();
+			json.put("auth-token",userLoginCollection.getId() );
+			json.put("userId", userLoginCollection.getUserName());			
+			json.put("lastUpdateDate", userLoginCollection.getLastUpdated() );	
+			data.put("data", json);
+			System.out.println(data);
+			return data.toString();
 		}else{
 			json.put("message", "Wrong username or password");
-			return json.toString();
+			return data.toString();
 		}	
 	 }
 
 	//logout
 	@RequestMapping(value="/logout", method=RequestMethod.DELETE)
 	 public @ResponseBody String  logoutUser(@RequestHeader(value="auth-token") String token){
-		UserLoginCollection userSession = userService.logoutUser(token);
+		String userSession = userService.logoutUser(token);
 		JSONObject json = new JSONObject();
 		if(userSession!=null){
-			json.put("logout", "success");
-			json.put("userName", userSession.getUserName());
+			json.put("logout", userSession);
 			return json.toString();
 		}else{
-			json.put("logout", "failed");
+			json.put("logout", userSession);
 			return json.toString();
 		}		
 	 }	
@@ -95,9 +100,10 @@ produces=MediaType.APPLICATION_JSON_VALUE)
 		System.out.println("Controller");
 		ArrayList<ItemCollection> items = itemService.getAllCategories();
 		JSONObject json = new JSONObject();
-
+		JSONObject itemList = new JSONObject();
 			if(items!=null){
-				json.put("categories",items );
+				itemList.put("itemList", items);
+				json.put("data",itemList );
 				return json.toString();
 			}else{
 				json.put("message", "No Categories");
@@ -107,13 +113,14 @@ produces=MediaType.APPLICATION_JSON_VALUE)
 	//actions
 	@RequestMapping(value="/actions", method=RequestMethod.GET,
 			produces=MediaType.APPLICATION_JSON_VALUE)
-	 public @ResponseBody String  getActions(){
+	 public @ResponseBody String  getActions(@RequestHeader(value="auth-token") String token){
 		System.out.println("Controller");
-		ArrayList<ActionCollection> actions = actionService.getAllActions();
+		ArrayList<ActionCollection> actions = actionService.getAllActions(token);
 		JSONObject json = new JSONObject();
-
+		JSONObject actionList = new JSONObject();
 			if(actions!=null){
-				json.put("actions",actions );
+				actionList.put("actionList", actions);
+				json.put("data",actionList );
 				return json.toString();
 			}else{
 				json.put("message", "No actions");
@@ -126,14 +133,15 @@ produces=MediaType.APPLICATION_JSON_VALUE)
 			produces=MediaType.APPLICATION_JSON_VALUE)
 	 public @ResponseBody String  postAd(@RequestBody Advertisement advertisement, @RequestHeader(value="auth-token") String token){
 		System.out.println("Controller");
-		AdvertisementCollection advert = advertisementService.postAd(advertisement,token);
+		Advertisement advert = advertisementService.postAd(advertisement,token);
 		JSONObject json = new JSONObject();
 			if(advert!=null){
 			json.put("_id",advert.getId() );
+			json.put("userName",advert.getUserName() );
 			json.put("name",advert.getName() );
 			json.put("title",advert.getTitle() );
 			json.put("description",advert.getDescription() );
-			json.put("category",advert.getCategoryl() );
+			json.put("category",advert.getCategory() );
 				return json.toString();
 			}else{
 				json.put("message", "Cannot post ad");
@@ -150,10 +158,18 @@ produces=MediaType.APPLICATION_JSON_VALUE)
 	 public @ResponseBody String  getUser(@RequestParam("userId") String uname){
 		System.out.println("Controller");
 		JSONObject json = new JSONObject();
-		UserCollection userDetails = userService.getUser(uname);
+		JSONObject userDetail = new JSONObject();
+		JSONObject userItems = new JSONObject();
+		User userDetails = userService.getUser(uname);
+		
 		if(userDetails!=null){
-			
-			json.put("userDetails",userDetails);
+			userItems.put("userName", userDetails.getUserName());
+			userItems.put("email", userDetails.getEmail());
+			userItems.put("firstName", userDetails.getFirstName());
+			userItems.put("lastName", userDetails.getLastName());
+			userItems.put("phone", userDetails.getPhone());
+			userDetail.put("user", userItems);
+			json.put("data",userDetail);
 			return json.toString();
 		}else{
 			json.put("userDetails","No such user");
@@ -163,6 +179,58 @@ produces=MediaType.APPLICATION_JSON_VALUE)
 	 }
 	
 	
+	//postBySpecificUser
+	@RequestMapping(value="/posts", method=RequestMethod.GET,
+			produces=MediaType.APPLICATION_JSON_VALUE)
+	 public @ResponseBody String  getPostsByUser(@RequestHeader(value="auth-token") String token){
+		System.out.println("Controller");
+		List<Advertisement> advertisementList = advertisementService.getAdsByUser(token);
+		
+		//JSONObject advertisementByUserListDetails = new JSONObject();
+		JSONObject json = new JSONObject();
+			if(advertisementList!=null){
+				
+				JSONObject advertisementByUserList = new JSONObject();
+				for(Advertisement x : advertisementList){
+					JSONObject temp = new JSONObject();
+					temp.put("id", x.getId());
+					temp.put("createdDate", x.getCreatedDate());
+					temp.put("title", x.getTitle());
+					temp.put("category", x.getCategory());
+					temp.put("status", "Open");
+					temp.put("description", x.getDescription());
+					advertisementByUserList.append("mypostList", temp);
+
+				}
+				
+				//advertisementByUserList.put("mypostList", advertisementList);
+				json.put("data",advertisementByUserList );
+				return json.toString();
+			}else{
+				json.put("message", "No actions");
+			return json.toString();
+			}
+
+	 }
+	
+	
+	
+	
+	
+	//Token
+	public static String generateToken(){
+		String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+        StringBuilder salt = new StringBuilder();
+        Random rnd = new Random();
+        while (salt.length() < 18) { // length of the random string.
+            int index = (int) (rnd.nextFloat() * SALTCHARS.length());
+            salt.append(SALTCHARS.charAt(index));
+            salt.append(System.currentTimeMillis());
+        }
+        String saltStr = salt.toString();
+        return saltStr;
+		
+	}
 
 
 }

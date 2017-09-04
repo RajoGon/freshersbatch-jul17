@@ -17,8 +17,9 @@ ActionDao actionDao;
 
 
 
-public ArrayList<ActionCollection> getAllActions() {
-	return actionDao.getAllActions();
+public ArrayList<ActionCollection> getAllActions(String token) {
+	// TODO Auto-generated method stub
+	return actionDao.getAllActions(token);
 }
 
 }

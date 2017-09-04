@@ -1,6 +1,10 @@
 package com.springmongo.dao;
 
 import java.net.UnknownHostException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.MongoDbFactory;
@@ -8,6 +12,8 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.BasicQuery;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.mongodb.MongoClient;
 import com.springmongo.collection.UserCollection;
@@ -17,60 +23,92 @@ import com.springmongo.entity.UserLogin;
 import com.springmongo.repository.UserLoginRepository;
 import com.springmongo.repository.UserRepository;
 
-public class UserDaoImplementation implements UserDao{
+public class UserDaoImplementation extends HibernateDaoSupport implements UserDao{
+	static SimpleDateFormat dateFormat = new SimpleDateFormat();
 	@Autowired
 	UserRepository userRepository;
+	
+	
+	
 	@Autowired
 	UserLoginRepository userLoginRepository;
-	public UserCollection createuser(User user) {
+	@Transactional
+	public User createuser(User user) {
 		System.out.println("in dao");
-		UserCollection userCollection = new UserCollection();
-		userCollection.setFirstName(user.getFirstName());
-		userCollection.setLastName(user.getLastName());
-		userCollection.setUserName(user.getUserName());
-		userCollection.setPassword(user.getPassword());
-		userCollection.setEmail(user.getEmail());
-		userCollection.setPhone(user.getPhone());
-		System.out.println(userCollection);
-		userRepository.save(userCollection);
-		return userCollection;
+	
+		getHibernateTemplate().save(user);
+		User createdUser = getHibernateTemplate().load(User.class, user.getUserId());
+		return createdUser;
 	}
+	@Transactional
 	public UserLoginCollection loginUser(UserLogin userLogin) {
-		System.out.println("in dao");
-		UserCollection userCollection = userRepository.getUserByUsername(userLogin.getUserName(),userLogin.getPassword());
-		System.out.println("found, "+userCollection);
-		UserLoginCollection userLoginCollection = new UserLoginCollection();		
+		System.out.println("in dao"+userLogin);		
+		org.hibernate.Query q = getHibernateTemplate().getSessionFactory().getCurrentSession().createQuery("from User where userName=:userId and password=:pass");
+		q.setParameter("userId", userLogin.getUserName());
+		q.setParameter("pass", userLogin.getPassword());
 
-			if(userCollection!=null){
-				userLoginCollection.setUserName(userCollection.getUserName());
-				System.out.println(userLoginCollection);
-				userLoginRepository.save(userLoginCollection);
-				return userLoginCollection;
+		User loggedInUser = (User) q.list().get(0);
+			if(loggedInUser!=null){
+				UserLoginCollection loggedIn = new UserLoginCollection();
+				loggedIn.setUserName(loggedInUser.getUserName());
+				loggedIn.setId(generateToken());
+				loggedIn.setLastUpdated(dateFormat.format(new Date()));
+				getHibernateTemplate().save(loggedIn);
+				return loggedIn;
 			}else{
 				return null;
 			}
 
 	}
-	public UserLoginCollection logoutUser(String token) {
+	@Transactional
+	public String logoutUser(String token) {
+		
+		boolean deleteSession = deleteToken(token);
 
-		UserLoginCollection userSession =userLoginRepository.findOne(token);
-		System.out.println("Found session, "+userSession);
-		if(userSession!=null){
-			userLoginRepository.delete(userSession);
-			return userSession;
+		if(deleteSession==true){
+			
+			return "success";
 		}else{
-			return null;
+			return "failed";
 		}
 	}
-	public UserCollection getUser(String uname) {
-		UserCollection userCollection = userRepository.getUser(uname);
-		if(userCollection!=null){
+	
+	@Transactional
+	public User getUser(String uname) {
+		org.hibernate.Query getUserById = getHibernateTemplate().getSessionFactory().getCurrentSession().createQuery("from User where userName=:userId");
+		getUserById.setParameter("userId", uname);
+		User userDetail = (User)getUserById.list().get(0);
+		if(userDetail!=null){
 			
-			return userCollection;
+			return userDetail;
 		}else{
 			return null;
 		
 		}
+	}
+	
+	public boolean deleteToken(String token){
+		org.hibernate.Query q = getHibernateTemplate().getSessionFactory().getCurrentSession().createQuery("Delete from UserLoginCollection where id=:authToken ");
+		q.setParameter("authToken", token);
+		int foundToken = q.executeUpdate();
+		if(foundToken!=0){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public static String generateToken(){
+		String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+        StringBuilder salt = new StringBuilder();
+        Random rnd = new Random();
+        while (salt.length() < 18) { // length of the random string.
+            int index = (int) (rnd.nextFloat() * SALTCHARS.length());
+            salt.append(SALTCHARS.charAt(index));
+            salt.append(System.currentTimeMillis());
+        }
+        String saltStr = salt.toString();
+        return saltStr;
+		
 	}
 
 }

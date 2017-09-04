@@ -1,0 +1,73 @@
+package com.springmongo.dao;
+
+import java.net.UnknownHostException;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.MongoDbFactory;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.BasicQuery;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.mongodb.MongoClient;
+import com.springmongo.collection.UserCollection;
+import com.springmongo.collection.UserLoginCollection;
+import com.springmongo.entity.User;
+import com.springmongo.entity.UserLogin;
+import com.springmongo.repository.UserLoginRepository;
+import com.springmongo.repository.UserRepository;
+
+public class UserDaoImplementation extends HibernateDaoSupport implements UserDao{
+	@Autowired
+	UserRepository userRepository;
+	
+	
+	
+	@Autowired
+	UserLoginRepository userLoginRepository;
+	@Transactional
+	public User createuser(User user) {
+		System.out.println("in dao");
+	
+		getHibernateTemplate().save(user);
+		User createdUser = getHibernateTemplate().load(User.class, user.getUserId());
+		return createdUser;
+	}
+	public User loginUser(UserLogin userLogin) {
+		System.out.println("in dao"+userLogin);
+		List<?> loggedInUser = getHibernateTemplate().find("from User where userName=? and password=?",userLogin.getUserName(), userLogin.getPassword());							
+		
+
+			if(loggedInUser!=null){
+				return (User) loggedInUser.get(0);
+			}else{
+				return null;
+			}
+
+	}
+	public UserLoginCollection logoutUser(String token) {
+
+		UserLoginCollection userSession =userLoginRepository.findOne(token);
+		System.out.println("Found session, "+userSession);
+		if(userSession!=null){
+			userLoginRepository.delete(userSession);
+			return userSession;
+		}else{
+			return null;
+		}
+	}
+	public UserCollection getUser(String uname) {
+		UserCollection userCollection = userRepository.getUser(uname);
+		if(userCollection!=null){
+			
+			return userCollection;
+		}else{
+			return null;
+		
+		}
+	}
+
+}

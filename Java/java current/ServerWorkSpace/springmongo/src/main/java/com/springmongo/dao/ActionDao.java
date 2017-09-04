@@ -9,5 +9,5 @@ import com.springmongo.collection.UserCollection;
 import com.springmongo.entity.User;
 
 public interface ActionDao {
-	public ArrayList<ActionCollection> getAllActions();
+	public ArrayList<ActionCollection> getAllActions(String token);
 }

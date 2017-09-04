@@ -1,0 +1,23 @@
+package com.springmongo.service;
+
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+
+import com.springmongo.collection.AdvertisementCollection;
+
+
+import com.springmongo.dao.AdvertisementDao;
+
+import com.springmongo.entity.Advertisement;
+
+
+public class AdvertisementServiceImplementation implements AdvertisementService{
+@Autowired
+AdvertisementDao advertisementDao;
+public Advertisement postAd(Advertisement advertisement, String token) {
+	return advertisementDao.postAd(advertisement,token);
+}
+
+}

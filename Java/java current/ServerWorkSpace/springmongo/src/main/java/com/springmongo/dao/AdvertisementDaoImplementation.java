@@ -2,8 +2,13 @@ package com.springmongo.dao;
 
 
 
-import org.springframework.beans.factory.annotation.Autowired;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.springmongo.collection.AdvertisementCollection;
 
@@ -15,33 +20,61 @@ import com.springmongo.repository.AdvertisementRepository;
 import com.springmongo.repository.UserLoginRepository;
 
 
-public class AdvertisementDaoImplementation implements AdvertisementDao{
-	@Autowired
-	AdvertisementRepository advertisementRepository;
-	@Autowired
-	UserLoginRepository userLoginRepository;
+public class AdvertisementDaoImplementation extends HibernateDaoSupport implements AdvertisementDao{
 
-	public AdvertisementCollection postAd(Advertisement advertisement, String token) {
-		
-		UserLoginCollection userSession =userLoginRepository.findOne(token);
+	static SimpleDateFormat dateFormat = new SimpleDateFormat();
+	@Transactional
+	public Advertisement postAd(Advertisement advertisement, String token) {	
+		boolean userSession =verifyToken(token);
 		System.out.println("Found session, "+userSession);
-		if(userSession!=null){
-			
-			AdvertisementCollection advertisementCollection = new AdvertisementCollection();
-			advertisementCollection.setName(advertisement.getName());
-			advertisementCollection.setTitle(advertisement.getTitle());
-			advertisementCollection.setDescription(advertisement.getDescription());
-			advertisementCollection.setCategoryl(advertisement.getCategory());
-			System.out.println(advertisementCollection);
-			advertisementRepository.save(advertisementCollection);
-			return advertisementCollection;
+		if(userSession==true){
+			org.hibernate.Query uname = getHibernateTemplate().getSessionFactory().getCurrentSession().createQuery("select userName from UserLoginCollection where id=:authToken ");
+			uname.setParameter("authToken", token);
+			String userName = (String) uname.list().get(0);
+			System.out.println("Add for usser"+userName);
+			advertisement.setCreatedDate(dateFormat.format(new Date()));
+			advertisement.setUserName(userName);
+			 getHibernateTemplate().save(advertisement);
+//			AdvertisementCollection advertisementCollection = new AdvertisementCollection();
+//			advertisementCollection.setName(advertisement.getName());
+//			advertisementCollection.setTitle(advertisement.getTitle());
+//			advertisementCollection.setDescription(advertisement.getDescription());
+//			advertisementCollection.setCategoryl(advertisement.getCategory());
+//			System.out.println(advertisementCollection);
+//			advertisementRepository.save(advertisementCollection);
+			return advertisement;
 	
 		}else{
 			return null;
 		}
 	}
 
+	public boolean verifyToken(String token){
+		org.hibernate.Query q = getHibernateTemplate().getSessionFactory().getCurrentSession().createQuery("from UserLoginCollection where id=:authToken ");
+		q.setParameter("authToken", token);
+		
+		if(q.list()!=null){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	@Transactional
+	public List<Advertisement> getAdsByUser(String token) {
+		org.hibernate.Query uname = getHibernateTemplate().getSessionFactory().getCurrentSession().createQuery("select userName from UserLoginCollection where id=:authToken ");
+		uname.setParameter("authToken", token);
+		String userName = (String) uname.list().get(0);
+		System.out.println("user"+userName);
+		org.hibernate.Query ads = getHibernateTemplate().getSessionFactory().getCurrentSession().createQuery("from Advertisement where userName= :uname ");
+		ads.setParameter("uname", userName);
+		List advertisementList = ads.list();
+		if(advertisementList!=null){
+			return advertisementList;
+		}else{
+			return null;
+		}
 	
+	}
 	
 
 }

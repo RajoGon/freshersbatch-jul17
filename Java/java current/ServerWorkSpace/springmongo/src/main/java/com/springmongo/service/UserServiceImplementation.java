@@ -11,7 +11,7 @@ import com.springmongo.entity.UserLogin;
 public class UserServiceImplementation implements UserService{
 	@Autowired
 	UserDao userDao;
-	public UserCollection createUser(User user){
+	public User createUser(User user){
 		System.out.println("In service");
 		return userDao.createuser(user);
 	}
@@ -19,10 +19,10 @@ public class UserServiceImplementation implements UserService{
 		System.out.println("In service");
 		return userDao.loginUser(userLogin);
 	}
-	public UserLoginCollection logoutUser(String token) {		
+	public String logoutUser(String token) {		
 		return userDao.logoutUser(token);
 	}
-	public UserCollection getUser(String uname) {
+	public User getUser(String uname) {
 		return userDao.getUser(uname);
 	}	
 	
