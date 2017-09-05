@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.springmongo.repository.UserLoginRepository"/>
-<fullyQualifiedTypeName name="org.hibernate.cfg.Configuration"/>
-<fullyQualifiedTypeName name="org.hibernate.SessionFactory"/>
-<fullyQualifiedTypeName name="org.hibernate.Session"/>
 <fullyQualifiedTypeName name="org.hibernate.Transaction"/>
 <fullyQualifiedTypeName name="javax.persistence.SequenceGenerator"/>
 <fullyQualifiedTypeName name="org.hibernate.SQLQuery"/>
@@ -30,8 +26,6 @@
 <fullyQualifiedTypeName name="com.springtest.hibernate.entity.manytomany.Student"/>
 <fullyQualifiedTypeName name="com.springtest.hibernate.entity.manytomany.MyStudent"/>
 <fullyQualifiedTypeName name="com.springtest.hibernate.entity.manytomany.MyCourse"/>
-<fullyQualifiedTypeName name="java.util.Set"/>
-<fullyQualifiedTypeName name="java.util.HashSet"/>
 <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
 <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
 <fullyQualifiedTypeName name="com.springtest.hibernate.entity.onetomany.EmployeeManager"/>
@@ -58,6 +52,12 @@
 <fullyQualifiedTypeName name="com.springmongo.collection.ItemCollection"/>
 <fullyQualifiedTypeName name="com.springmongo.collection.ActionCollection"/>
 <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="com.springmongo.entity.UpdateAd"/>
+<fullyQualifiedTypeName name="com.springmongo.entity.GetMessage"/>
+<fullyQualifiedTypeName name="com.springmongo.entity.SendMessage"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
