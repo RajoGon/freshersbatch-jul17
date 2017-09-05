@@ -26,6 +26,7 @@ import com.springmongo.collection.ItemCollection;
 import com.springmongo.collection.UserCollection;
 import com.springmongo.collection.UserLoginCollection;
 import com.springmongo.entity.Advertisement;
+import com.springmongo.entity.UpdateAd;
 import com.springmongo.entity.User;
 import com.springmongo.entity.UserLogin;
 import com.springmongo.service.ActionService;
@@ -177,8 +178,6 @@ produces=MediaType.APPLICATION_JSON_VALUE)
 		}
 		
 	 }
-	
-	
 	//postBySpecificUser
 	@RequestMapping(value="/posts", method=RequestMethod.GET,
 			produces=MediaType.APPLICATION_JSON_VALUE)
@@ -212,10 +211,45 @@ produces=MediaType.APPLICATION_JSON_VALUE)
 			}
 
 	 }
+	//Update Ad
+	@RequestMapping(value="/postAd", method=RequestMethod.PUT,
+			consumes=MediaType.APPLICATION_JSON_VALUE,
+			produces=MediaType.APPLICATION_JSON_VALUE)
+	 public @ResponseBody String  updateAd(@RequestBody UpdateAd updateAd, @RequestHeader(value="auth-token") String token){
+		System.out.println("Controller "+updateAd);
+		JSONObject json = new JSONObject();
+		json.put("update", advertisementService.updateAd(updateAd,token));
+		return json.toString();
+	 }
 	
-	
-	
-	
+	//Delete Specific ad
+	@RequestMapping(value="/post", method=RequestMethod.DELETE,
+			produces=MediaType.APPLICATION_JSON_VALUE)
+	 public @ResponseBody String  deleteAd(@RequestParam("postId") int postId,@RequestHeader(value="auth-token") String token ){
+		System.out.println("Controller");
+		JSONObject json = new JSONObject();
+		json.put("delete", advertisementService.deleteAd(postId,token));
+		return json.toString();
+		
+	 }
+	//ViewAd
+	@RequestMapping(value="/viewAd", method=RequestMethod.GET,
+			produces=MediaType.APPLICATION_JSON_VALUE)
+	 public @ResponseBody String  viewAd(@RequestParam("postId") int postId,@RequestHeader(value="auth-token") String token ){
+		System.out.println("Controller "+postId);
+		Advertisement x = advertisementService.viewAd(postId,token);
+		JSONObject json = new JSONObject();
+		JSONObject temp = new JSONObject();
+		temp.put("id", x.getId());
+		temp.put("createdDate", x.getCreatedDate());
+		temp.put("title", x.getTitle());
+		temp.put("category", x.getCategory());
+		temp.put("status", "Open");
+		temp.put("description", x.getDescription());
+		json.put("data",temp );
+		return json.toString();
+		
+	 }
 	
 	//Token
 	public static String generateToken(){

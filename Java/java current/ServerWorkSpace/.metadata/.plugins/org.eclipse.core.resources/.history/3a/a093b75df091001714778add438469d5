@@ -1,0 +1,86 @@
+package com.springmongo.dao;
+
+
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.springmongo.collection.AdvertisementCollection;
+
+import com.springmongo.collection.UserLoginCollection;
+import com.springmongo.entity.Advertisement;
+
+import com.springmongo.repository.AdvertisementRepository;
+
+import com.springmongo.repository.UserLoginRepository;
+
+
+public class AdvertisementDaoImplementation extends HibernateDaoSupport implements AdvertisementDao{
+
+	static SimpleDateFormat dateFormat = new SimpleDateFormat();
+	@Transactional
+	public Advertisement postAd(Advertisement advertisement, String token) {	
+		boolean userSession =verifyToken(token);
+		System.out.println("Found session, "+userSession);
+		if(userSession==true){
+			org.hibernate.Query uname = getHibernateTemplate().getSessionFactory().getCurrentSession().createQuery("select userName from UserLoginCollection where id=:authToken ");
+			uname.setParameter("authToken", token);
+			String userName = (String) uname.list().get(0);
+			System.out.println("Add for usser"+userName);
+			advertisement.setCreatedDate(dateFormat.format(new Date()));
+			advertisement.setUserName(userName);
+			 getHibernateTemplate().save(advertisement);
+			return advertisement;
+	
+		}else{
+			return null;
+		}
+	}
+
+	
+	@Transactional
+	public List<Advertisement> getAdsByUser(String token) {
+		org.hibernate.Query uname = getHibernateTemplate().getSessionFactory().getCurrentSession().createQuery("select userName from UserLoginCollection where id=:authToken ");
+		uname.setParameter("authToken", token);
+		String userName = (String) uname.list().get(0);
+		System.out.println("user"+userName);
+		org.hibernate.Query ads = getHibernateTemplate().getSessionFactory().getCurrentSession().createQuery("from Advertisement where userName= :uname ");
+		ads.setParameter("uname", userName);
+		List advertisementList = ads.list();
+		if(advertisementList!=null){
+			return advertisementList;
+		}else{
+			return null;
+		}
+	
+	}
+	@Transactional
+	public String updateAd(String token) {
+		boolean verify = verifyToken(token);
+		if(verify==true){
+			return "Updated";
+		}else{
+			return "Failed";
+		}
+		
+	}
+	
+	
+	
+	public boolean verifyToken(String token){
+		org.hibernate.Query q = getHibernateTemplate().getSessionFactory().getCurrentSession().createQuery("from UserLoginCollection where id=:authToken ");
+		q.setParameter("authToken", token);
+		
+		if(q.list()!=null){
+			return true;
+		}else{
+			return false;
+		}
+	}
+
+}

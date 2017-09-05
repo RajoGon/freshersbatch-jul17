@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.springmongo.dao.ActionDao"/>
-<fullyQualifiedTypeName name="com.springmongo.service.ActionService"/>
-<fullyQualifiedTypeName name="com.springmongo.collection.ActionCollection"/>
-<fullyQualifiedTypeName name="org.springframework.data.annotation.Id"/>
-<fullyQualifiedTypeName name="com.springmongo.entity.Advertisement"/>
-<fullyQualifiedTypeName name="com.springmongo.repository.AdvertisementRepository"/>
-<fullyQualifiedTypeName name="com.springmongo.dao.AdvertisementDao"/>
-<fullyQualifiedTypeName name="com.springmongo.service.AdvertisementService"/>
-<fullyQualifiedTypeName name="com.springmongo.collection.AdvertisementCollection"/>
 <fullyQualifiedTypeName name="com.springmongo.repository.UserLoginRepository"/>
 <fullyQualifiedTypeName name="org.hibernate.cfg.Configuration"/>
 <fullyQualifiedTypeName name="org.hibernate.SessionFactory"/>
 <fullyQualifiedTypeName name="org.hibernate.Session"/>
 <fullyQualifiedTypeName name="org.hibernate.Transaction"/>
-<fullyQualifiedTypeName name="org.hibernate.Query"/>
 <fullyQualifiedTypeName name="javax.persistence.SequenceGenerator"/>
 <fullyQualifiedTypeName name="org.hibernate.SQLQuery"/>
 <fullyQualifiedTypeName name="org.hibernate.annotations.Entity"/>
@@ -28,7 +18,6 @@
 <fullyQualifiedTypeName name="org.hibernate.criterion.LogicalExpression"/>
 <fullyQualifiedTypeName name="com.springtest.hibernate.entity.onetoone.Profile"/>
 <fullyQualifiedTypeName name="com.springtest.hibernate.entity.onetoone.Employee"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
 <fullyQualifiedTypeName name="com.springtest.hibernate.entity.onetomany.Stock"/>
 <fullyQualifiedTypeName name="com.springtest.hibernate.entity.onetomany.Market"/>
@@ -41,14 +30,12 @@
 <fullyQualifiedTypeName name="com.springtest.hibernate.entity.manytomany.Student"/>
 <fullyQualifiedTypeName name="com.springtest.hibernate.entity.manytomany.MyStudent"/>
 <fullyQualifiedTypeName name="com.springtest.hibernate.entity.manytomany.MyCourse"/>
-<fullyQualifiedTypeName name="javax.persistence.Column"/>
 <fullyQualifiedTypeName name="java.util.Set"/>
 <fullyQualifiedTypeName name="java.util.HashSet"/>
 <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
 <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
 <fullyQualifiedTypeName name="com.springtest.hibernate.entity.onetomany.EmployeeManager"/>
 <fullyQualifiedTypeName name="javax.persistence.Query"/>
-<fullyQualifiedTypeName name="javax.persistence.Entity"/>
 <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
 <fullyQualifiedTypeName name="com.springtest.hibernate.entity.singletable.Vehicle"/>
 <fullyQualifiedTypeName name="com.springtest.hibernate.entity.singletable.Car"/>
@@ -60,4 +47,17 @@
 <fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="com.springtest.hibernate.entity.Product"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
+<fullyQualifiedTypeName name="org.springframework.orm.hibernate5.support.HibernateDaoSupport"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="javax.persistence.Column"/>
+<fullyQualifiedTypeName name="com.springmongo.collection.UserLoginCollection"/>
+<fullyQualifiedTypeName name="javax.persistence.Id"/>
+<fullyQualifiedTypeName name="org.hibernate.Query"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="com.springmongo.collection.ItemCollection"/>
+<fullyQualifiedTypeName name="com.springmongo.collection.ActionCollection"/>
+<fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
 </qualifiedTypeNameHistroy>
