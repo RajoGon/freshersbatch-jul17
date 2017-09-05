@@ -6,6 +6,7 @@ import java.util.List;
 import com.springmongo.collection.AdvertisementCollection;
 
 import com.springmongo.entity.Advertisement;
+import com.springmongo.entity.GetMessage;
 import com.springmongo.entity.UpdateAd;
 
 
@@ -19,4 +20,10 @@ public interface AdvertisementService {
 	public String deleteAd(int postId, String token);
 
 	public Advertisement viewAd(int postId, String token);
+
+	public String sendMessage(GetMessage messageObj, String token);
+
+	public List<Advertisement> viewAllAds();
+
+	public List<Advertisement> searchByText(String searchText);
 }

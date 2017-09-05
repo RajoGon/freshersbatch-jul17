@@ -26,6 +26,7 @@ import com.springmongo.collection.ItemCollection;
 import com.springmongo.collection.UserCollection;
 import com.springmongo.collection.UserLoginCollection;
 import com.springmongo.entity.Advertisement;
+import com.springmongo.entity.GetMessage;
 import com.springmongo.entity.UpdateAd;
 import com.springmongo.entity.User;
 import com.springmongo.entity.UserLogin;
@@ -193,6 +194,7 @@ produces=MediaType.APPLICATION_JSON_VALUE)
 				for(Advertisement x : advertisementList){
 					JSONObject temp = new JSONObject();
 					temp.put("id", x.getId());
+					temp.put("name", x.getName());
 					temp.put("createdDate", x.getCreatedDate());
 					temp.put("title", x.getTitle());
 					temp.put("category", x.getCategory());
@@ -241,6 +243,7 @@ produces=MediaType.APPLICATION_JSON_VALUE)
 		JSONObject json = new JSONObject();
 		JSONObject temp = new JSONObject();
 		temp.put("id", x.getId());
+		temp.put("name", x.getName());
 		temp.put("createdDate", x.getCreatedDate());
 		temp.put("title", x.getTitle());
 		temp.put("category", x.getCategory());
@@ -250,6 +253,82 @@ produces=MediaType.APPLICATION_JSON_VALUE)
 		return json.toString();
 		
 	 }
+	//sendMessage
+	@RequestMapping(value="/message", method=RequestMethod.POST,
+			produces=MediaType.APPLICATION_JSON_VALUE)
+	 public @ResponseBody String sendMessage(@RequestBody GetMessage messageObj,@RequestHeader(value="auth-token") String token ){
+		System.out.println("Controller");
+		JSONObject json = new JSONObject();
+		json.put("Message", advertisementService.sendMessage(messageObj,token));
+		return json.toString();
+		
+	 }
+	//viewAllaDS
+	@RequestMapping(value="/posts/search", method=RequestMethod.GET,
+			produces=MediaType.APPLICATION_JSON_VALUE)
+	 public @ResponseBody String viewAllAds(){
+		int i=0;
+		System.out.println("Controller");
+		List<Advertisement> adList =  advertisementService.viewAllAds();
+		JSONObject json = new JSONObject();
+		JSONObject advertiseList = new JSONObject();
+		if(adList!=null){
+			for(Advertisement x : adList){
+				if(i<11){
+					JSONObject temp = new JSONObject();
+					temp.put("id", x.getId());
+					temp.put("name", x.getName());
+					temp.put("createdDate", x.getCreatedDate());
+					temp.put("title", x.getTitle());
+					temp.put("category", x.getCategory());
+					temp.put("status", "Open");
+					temp.put("description", x.getDescription());
+					advertiseList.append("advertiseList", temp);
+				}				
+				i++;
+			}			
+			json.put("data",advertiseList);
+			return json.toString();	
+		}else{
+			json.put("data","no ads");
+			return json.toString();	
+		}
+			
+	 }
+	
+	//SearchbyText
+	@RequestMapping(value="/posts/search/text", method=RequestMethod.GET,
+			produces=MediaType.APPLICATION_JSON_VALUE)
+	 public @ResponseBody String  searchByText(@RequestParam("searchText") String searchText ){
+		int i=0;
+		System.out.println("Controller "+searchText);
+		List<Advertisement> adList = advertisementService.searchByText(searchText);
+		JSONObject json = new JSONObject();
+		JSONObject advertiseList = new JSONObject();
+		if(adList!=null){
+			for(Advertisement x : adList){
+				if(i<11){
+					JSONObject temp = new JSONObject();
+					temp.put("id", x.getId());
+					temp.put("name", x.getName());
+					temp.put("createdDate", x.getCreatedDate());
+					temp.put("title", x.getTitle());
+					temp.put("category", x.getCategory());
+					temp.put("status", "Open");
+					temp.put("description", x.getDescription());
+					advertiseList.append("advertiseList", temp);
+				}				
+				i++;
+			}			
+			json.put("data",advertiseList);
+			return json.toString();	
+		}else{
+			json.put("data","no ads");
+			return json.toString();	
+		}
+		
+	 }
+	
 	
 	//Token
 	public static String generateToken(){

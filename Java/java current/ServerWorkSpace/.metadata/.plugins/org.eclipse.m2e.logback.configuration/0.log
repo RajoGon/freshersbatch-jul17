@@ -9673,3 +9673,427 @@
 2017-09-05 10:45:15,468 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
 2017-09-05 10:45:15,468 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2017-09-05 10:45:15,468 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:22:38,155 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:22:38,155 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:22:38,155 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:22:38,155 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:22:56,172 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:22:56,172 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:22:56,172 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:22:56,172 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:23:57,535 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:23:57,535 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:23:57,535 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:23:57,535 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:24:11,627 [Worker-75] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:24:11,627 [Worker-75] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:24:11,627 [Worker-75] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:24:11,627 [Worker-75] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:24:46,681 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:24:46,681 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:24:46,681 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:24:46,681 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:24:52,982 [Worker-73] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:24:52,982 [Worker-73] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:24:52,982 [Worker-73] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:24:52,982 [Worker-73] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:25:10,212 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:25:10,212 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:25:10,212 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:25:10,212 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:25:55,501 [Worker-73] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:25:55,501 [Worker-73] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:25:55,517 [Worker-73] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:25:55,517 [Worker-73] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:26:04,503 [Worker-72] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:26:04,503 [Worker-72] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:26:04,503 [Worker-72] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:26:04,503 [Worker-72] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:26:31,977 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:26:31,977 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:26:31,977 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:26:31,977 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:27:17,885 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:27:17,885 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:27:17,885 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:27:17,885 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:27:50,033 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:27:50,033 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:27:50,033 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:27:50,033 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:28:08,391 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:28:08,407 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:28:08,407 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:28:08,407 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:29:06,182 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:29:06,182 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-09-05 11:29:06,182 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:29:06,182 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:33:31,886 [Worker-73] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:33:31,886 [Worker-73] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:33:31,886 [Worker-73] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:33:31,886 [Worker-73] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:33:45,414 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:33:45,414 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:33:45,414 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:33:45,414 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:33:59,585 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:33:59,585 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:33:59,585 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:33:59,585 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:34:50,055 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:34:50,071 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:34:50,071 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:34:50,071 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:34:59,682 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:34:59,682 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:34:59,682 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:34:59,682 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:36:16,554 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:36:16,554 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:36:16,554 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:36:16,554 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:36:38,280 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:36:38,280 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:36:38,280 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:36:38,280 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:36:41,669 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:36:41,669 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:36:41,669 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:36:41,669 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:37:07,423 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:37:07,423 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:37:07,439 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:37:07,439 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:37:34,567 [Worker-75] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:37:34,567 [Worker-75] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:37:34,567 [Worker-75] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:37:34,567 [Worker-75] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:37:50,455 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:37:50,470 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:37:50,470 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:37:50,470 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:38:11,912 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:38:11,912 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:38:11,912 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:38:11,912 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:38:14,115 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:38:14,115 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:38:14,115 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:38:14,115 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:40:35,348 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:40:35,348 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:40:35,348 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:40:35,348 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:41:12,130 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:41:12,130 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:41:12,130 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:41:12,130 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:42:29,839 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:42:29,854 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:42:29,854 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:42:29,854 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:42:37,478 [Worker-73] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:42:37,478 [Worker-73] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:42:37,478 [Worker-73] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:42:37,478 [Worker-73] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:42:40,995 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:42:40,995 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:42:40,995 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:42:40,995 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:42:54,559 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:42:54,559 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:42:54,559 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:42:54,559 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:46:41,737 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:46:41,738 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:46:41,739 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:46:41,739 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:47:08,988 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:47:08,989 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:47:08,990 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:47:08,990 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:49:27,677 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:49:27,677 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:49:27,677 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:49:27,677 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:52:35,069 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:52:35,069 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:52:35,069 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:52:35,069 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 11:54:59,693 [Worker-83] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:54:59,693 [Worker-83] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 11:54:59,694 [Worker-83] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 11:54:59,694 [Worker-83] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:09:52,739 [Worker-87] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:09:52,739 [Worker-87] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 12:09:52,739 [Worker-87] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:09:52,739 [Worker-87] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:10:15,464 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:10:15,464 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 12:10:15,480 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:10:15,480 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:10:27,023 [Worker-94] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:10:27,023 [Worker-94] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 12:10:27,023 [Worker-94] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:10:27,023 [Worker-94] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:11:23,727 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:11:23,727 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 12:11:23,727 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:11:23,727 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:15:46,267 [Worker-88] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:15:46,267 [Worker-88] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 12:15:46,267 [Worker-88] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:15:46,267 [Worker-88] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:16:13,858 [Worker-95] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:16:13,858 [Worker-95] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 12:16:13,858 [Worker-95] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:16:13,858 [Worker-95] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:18:41,980 [Worker-97] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:18:41,980 [Worker-97] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 12:18:41,980 [Worker-97] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:18:41,980 [Worker-97] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:18:44,569 [Worker-89] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:18:44,569 [Worker-89] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 12:18:44,569 [Worker-89] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:18:44,569 [Worker-89] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:20:18,662 [Worker-95] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:20:18,662 [Worker-95] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 12:20:18,662 [Worker-95] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:20:18,662 [Worker-95] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:21:58,306 [Worker-97] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:21:58,322 [Worker-97] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 12:21:58,322 [Worker-97] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:21:58,322 [Worker-97] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:23:55,923 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:23:55,924 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 12:23:55,925 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:23:55,925 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:24:29,837 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:24:29,838 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 12:24:29,838 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:24:29,838 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:27:04,480 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:27:04,480 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 12:27:04,480 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:27:04,480 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:29:15,269 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:29:15,269 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 12:29:15,269 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:29:15,269 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:30:24,377 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:30:24,377 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 12:30:24,377 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:30:24,377 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:31:47,116 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:31:47,116 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 12:31:47,116 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:31:47,116 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:38:14,512 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:38:14,512 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 12:38:14,512 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:38:14,512 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:38:31,197 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:38:31,197 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 12:38:31,213 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:38:31,213 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:38:36,323 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:38:36,323 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 12:38:36,339 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:38:36,339 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:39:30,042 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:39:30,042 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 12:39:30,057 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:39:30,057 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:40:57,225 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:40:57,225 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 12:40:57,225 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:40:57,225 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:42:56,078 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:42:56,078 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 12:42:56,078 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:42:56,078 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:44:26,700 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:44:26,700 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-09-05 12:44:26,700 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:44:26,700 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:44:31,127 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:44:31,127 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-09-05 12:44:31,127 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:44:31,127 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:44:35,233 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:44:35,233 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-09-05 12:44:35,233 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:44:35,233 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:44:46,829 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:44:46,829 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-09-05 12:44:46,845 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:44:46,845 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:45:23,096 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:45:23,096 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-09-05 12:45:23,096 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:45:23,096 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:45:26,280 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:45:26,280 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-09-05 12:45:26,280 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:45:26,280 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:46:04,927 [Worker-104] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:46:04,927 [Worker-104] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-09-05 12:46:04,927 [Worker-104] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:46:04,927 [Worker-104] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:51:12,135 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:51:12,136 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 12:51:12,137 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:51:12,137 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:51:40,003 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:51:40,003 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 12:51:40,004 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:51:40,004 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 12:54:17,314 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:54:17,314 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 12:54:17,314 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 12:54:17,314 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 13:41:22,899 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 13:41:22,899 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 13:41:22,899 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 13:41:22,899 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 13:42:31,600 [Worker-125] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 13:42:31,600 [Worker-125] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 13:42:31,600 [Worker-125] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 13:42:31,600 [Worker-125] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 13:42:42,888 [Worker-126] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 13:42:42,888 [Worker-126] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 13:42:42,888 [Worker-126] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 13:42:42,888 [Worker-126] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 13:43:01,920 [Worker-125] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 13:43:01,921 [Worker-125] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 13:43:01,921 [Worker-125] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 13:43:01,921 [Worker-125] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:10:50,610 [Worker-128] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:10:50,611 [Worker-128] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:10:50,612 [Worker-128] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:10:50,612 [Worker-128] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:11:19,831 [Worker-129] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:11:19,831 [Worker-129] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:11:19,832 [Worker-129] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:11:19,832 [Worker-129] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:11:24,329 [Worker-129] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:11:24,330 [Worker-129] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:11:24,331 [Worker-129] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:11:24,331 [Worker-129] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:11:58,524 [Worker-136] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:11:58,524 [Worker-136] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:11:58,524 [Worker-136] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:11:58,524 [Worker-136] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:12:00,959 [Worker-129] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:12:00,960 [Worker-129] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:12:00,961 [Worker-129] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:12:00,961 [Worker-129] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:12:22,637 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:12:22,638 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:12:22,639 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:12:22,639 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:12:50,936 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:12:50,936 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:12:50,937 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:12:50,937 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:12:54,682 [Worker-128] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:12:54,682 [Worker-128] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:12:54,684 [Worker-128] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:12:54,684 [Worker-128] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:13:05,755 [Worker-134] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:13:05,755 [Worker-134] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:13:05,756 [Worker-134] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:13:05,756 [Worker-134] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:13:51,962 [Worker-134] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:13:51,963 [Worker-134] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:13:51,963 [Worker-134] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:13:51,963 [Worker-134] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:15:15,108 [Worker-136] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:15:15,109 [Worker-136] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:15:15,110 [Worker-136] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:15:15,110 [Worker-136] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:15:34,952 [Worker-129] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:15:34,952 [Worker-129] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:15:34,953 [Worker-129] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:15:34,953 [Worker-129] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:15:47,319 [Worker-137] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:15:47,320 [Worker-137] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:15:47,321 [Worker-137] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:15:47,321 [Worker-137] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:15:51,624 [Worker-139] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:15:51,624 [Worker-139] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:15:51,625 [Worker-139] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:15:51,625 [Worker-139] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:16:01,400 [Worker-139] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:16:01,400 [Worker-139] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:16:01,401 [Worker-139] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:16:01,401 [Worker-139] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:16:10,604 [Worker-136] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:16:10,605 [Worker-136] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:16:10,606 [Worker-136] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:16:10,606 [Worker-136] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:16:26,828 [Worker-137] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:16:26,828 [Worker-137] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:16:26,829 [Worker-137] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:16:26,829 [Worker-137] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:16:35,700 [Worker-137] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:16:35,701 [Worker-137] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:16:35,701 [Worker-137] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:16:35,701 [Worker-137] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:17:04,271 [Worker-140] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:17:04,271 [Worker-140] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:17:04,271 [Worker-140] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:17:04,271 [Worker-140] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:17:41,523 [Worker-140] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:17:41,523 [Worker-140] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:17:41,523 [Worker-140] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:17:41,523 [Worker-140] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:17:55,723 [Worker-139] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:17:55,723 [Worker-139] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:17:55,724 [Worker-139] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:17:55,724 [Worker-139] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:21:12,404 [Worker-128] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:21:12,404 [Worker-128] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:21:12,404 [Worker-128] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:21:12,404 [Worker-128] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:21:54,435 [Worker-136] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:21:54,435 [Worker-136] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:21:54,435 [Worker-136] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:21:54,435 [Worker-136] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:26:35,093 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:26:35,093 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:26:35,094 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:26:35,094 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:27:18,448 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:27:18,449 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:27:18,450 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:27:18,450 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:31:59,138 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:31:59,139 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:31:59,140 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:31:59,140 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:32:34,883 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:32:34,883 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:32:34,899 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:32:34,899 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:32:43,142 [Worker-148] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:32:43,142 [Worker-148] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:32:43,142 [Worker-148] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:32:43,142 [Worker-148] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:35:48,926 [Worker-144] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:35:48,926 [Worker-144] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:35:48,941 [Worker-144] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:35:48,941 [Worker-144] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:47:11,842 [Worker-154] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:47:11,842 [Worker-154] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:47:11,843 [Worker-154] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:47:11,843 [Worker-154] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:50:21,157 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:50:21,157 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:50:21,158 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:50:21,158 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources
+2017-09-05 14:50:46,171 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:50:46,171 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-09-05 14:50:46,172 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-09-05 14:50:46,172 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gon_r\Desktop\java current\ServerWorkSpace\springmongo\src\test\resources

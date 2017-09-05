@@ -3,9 +3,12 @@ package com.springmongo.dao;
 
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
@@ -15,6 +18,8 @@ import com.springmongo.collection.AdvertisementCollection;
 
 import com.springmongo.collection.UserLoginCollection;
 import com.springmongo.entity.Advertisement;
+import com.springmongo.entity.GetMessage;
+import com.springmongo.entity.SendMessage;
 import com.springmongo.entity.UpdateAd;
 import com.springmongo.repository.AdvertisementRepository;
 
@@ -117,6 +122,68 @@ public class AdvertisementDaoImplementation extends HibernateDaoSupport implemen
 			return null;
 		}
 	}
+	
+	@Transactional
+	public String sendMessage(GetMessage messageObj, String token) {
+		boolean verify = verifyToken(token);
+		if(verify==true){
+			Advertisement advertisement = getHibernateTemplate().getSessionFactory().getCurrentSession().get(Advertisement.class, messageObj.getPostId());
+			SendMessage m = new SendMessage(messageObj.getMessage(),advertisement );
+			Set<SendMessage> s = advertisement.getMessages();
+			s.add(m);
+			advertisement.setMessages(s);
+			getHibernateTemplate().save(advertisement);
+			return "sent";
+		}else{
+			return "sending failed";
+		}
+		
+	}
+	@Transactional
+	public List<Advertisement> viewAllAds() {
+		// TODO Auto-generated method stub
+		return (List<Advertisement>) getHibernateTemplate().find("from Advertisement");
+	}
+	
+	@Transactional
+	public List<Advertisement> searchByText(String searchText) {
+		boolean flag = false;
+		List<Advertisement> filteredAds = new ArrayList<Advertisement>();
+		List<Advertisement> allAds	= (List<Advertisement>) getHibernateTemplate().find("from Advertisement");
+		
+		if(allAds!=null){
+			for(Advertisement x : allAds){
+				if(x.getName().contains(searchText) && flag==false){
+					filteredAds.add(x);
+					flag=true;
+				}
+				if(x.getDescription().contains(searchText) && flag==false){
+					filteredAds.add(x);
+					flag=true;
+				}
+				if(x.getDescription().contains(searchText) && flag==false){
+					filteredAds.add(x);
+					flag=true;
+				}
+				if(x.getTitle().contains(searchText) && flag==false){
+					filteredAds.add(x);
+					flag=true;
+				}
+				if(x.getUserName().contains(searchText) && flag==false){
+					filteredAds.add(x);
+					flag=true;
+				}
+				flag=false;
+			}
+			return filteredAds;
+		}else{
+			return null;
+		}
+		
+		
+	}
+
+
 	public boolean verifyToken(String token){
 		org.hibernate.Query q = getHibernateTemplate().getSessionFactory().getCurrentSession().createQuery("from UserLoginCollection where id=:authToken ");
 		q.setParameter("authToken", token);
@@ -127,6 +194,13 @@ public class AdvertisementDaoImplementation extends HibernateDaoSupport implemen
 			return false;
 		}
 	}
+
+
+	
+
+
+
+	
 
 
 	

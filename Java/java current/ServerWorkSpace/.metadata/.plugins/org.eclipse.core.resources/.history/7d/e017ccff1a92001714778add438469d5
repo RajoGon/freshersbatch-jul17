@@ -1,0 +1,70 @@
+package com.springmongo.entity;
+
+import java.io.Serializable;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+
+
+@Entity
+@Table(name="MESSAGES")
+public class SendMessage implements Serializable{
+	@Id
+	@GeneratedValue
+	@Column(name="id")
+	int messageId;
+	@Column(name="message")
+	private String message;
+	
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+	@JoinColumn(name="postId")
+	private Advertisement advertisement;
+	public SendMessage(){}
+	@Override
+	public String toString() {
+		return "SendMessage [messageId=" + messageId + ", message=" + message + ", advertisement=" + advertisement
+				+ "]";
+	}
+	public int getMessageId() {
+		return messageId;
+	}
+	public void setMessageId(int messageId) {
+		this.messageId = messageId;
+	}
+	public String getMessage() {
+		return message;
+	}
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	public Advertisement getAdvertisement() {
+		return advertisement;
+	}
+	public void setAdvertisement(Advertisement advertisement) {
+		this.advertisement = advertisement;
+	}
+	public SendMessage(String message) {
+		super();
+		this.message = message;
+	}
+	public SendMessage(String message, Advertisement advertisement) {
+		super();
+		this.message = message;
+		this.advertisement = advertisement;
+	}
+	public SendMessage(int messageId, String message, Advertisement advertisement) {
+		super();
+		this.messageId = messageId;
+		this.message = message;
+		this.advertisement = advertisement;
+	}
+	
+}
