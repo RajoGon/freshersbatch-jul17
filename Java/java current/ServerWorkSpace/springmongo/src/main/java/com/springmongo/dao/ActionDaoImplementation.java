@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.springmongo.collection.ActionCollection;
 import com.springmongo.collection.ItemCollection;
+import com.springmongo.entity.DateConditions;
 import com.springmongo.repository.ActionRepository;
 import com.springmongo.repository.ItemRepository;
 
@@ -33,6 +34,22 @@ public class ActionDaoImplementation extends HibernateDaoSupport implements Acti
 		
 		
 	}
+	
+	@Transactional
+	public ArrayList<DateConditions> getAllDateConditions(String token) {
+		boolean verify = verifyToken(token);
+		if(verify==true){
+			Query dates = getHibernateTemplate().getSessionFactory().getCurrentSession().createQuery("from DateConditions");
+			ArrayList<DateConditions> datesList = (ArrayList<DateConditions>) dates.list();
+			if(datesList!=null){
+				return datesList;
+			}else{
+				return null;
+			}
+		}else{
+			return null;
+		}
+	}
 
 	public boolean verifyToken(String token){
 		org.hibernate.Query q = getHibernateTemplate().getSessionFactory().getCurrentSession().createQuery("from UserLoginCollection where id=:authToken ");
@@ -44,6 +61,8 @@ public class ActionDaoImplementation extends HibernateDaoSupport implements Acti
 			return false;
 		}
 	}
+
+	
 	
 	
 

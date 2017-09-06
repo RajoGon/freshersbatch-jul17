@@ -26,6 +26,7 @@ import com.springmongo.collection.ItemCollection;
 import com.springmongo.collection.UserCollection;
 import com.springmongo.collection.UserLoginCollection;
 import com.springmongo.entity.Advertisement;
+import com.springmongo.entity.DateConditions;
 import com.springmongo.entity.GetMessage;
 import com.springmongo.entity.UpdateAd;
 import com.springmongo.entity.User;
@@ -328,7 +329,23 @@ produces=MediaType.APPLICATION_JSON_VALUE)
 		}
 		
 	 }
-	
+	//getDateConditions
+	@RequestMapping(value="/dateconditions", method=RequestMethod.GET,
+			produces=MediaType.APPLICATION_JSON_VALUE)
+	 public @ResponseBody String  getDateConditions(@RequestHeader(value="auth-token") String token){
+		System.out.println("Controller");
+		ArrayList<DateConditions> dates = actionService.getAllDateConditions(token);
+		JSONObject json = new JSONObject();
+		JSONObject dateList = new JSONObject();
+			if(dates!=null){
+				dateList.put("dateList", dates);
+				json.put("data",dateList );
+				return json.toString();
+			}else{
+				json.put("message", "No date conditions");
+			return json.toString();
+			}	
+	 }
 	
 	//Token
 	public static String generateToken(){

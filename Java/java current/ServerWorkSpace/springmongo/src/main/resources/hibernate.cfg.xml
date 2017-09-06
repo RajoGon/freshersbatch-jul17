@@ -22,6 +22,7 @@
 		<mapping class="com.springmongo.collection.ActionCollection"/>
 		<mapping class="com.springmongo.entity.Advertisement"/>
 		<mapping class="com.springmongo.entity.SendMessage"/>
+		<mapping class="com.springmongo.entity.DateConditions"/>
 		<!-- transactional|read-write|nonstrict-read-write|read-only -->
 		<!-- <class-cache usage="read-write" class="com.springtest.hibernate.entity.Product"/> -->
 

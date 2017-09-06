@@ -161,7 +161,7 @@ public class AdvertisementDaoImplementation extends HibernateDaoSupport implemen
 					filteredAds.add(x);
 					flag=true;
 				}
-				if(x.getDescription().contains(searchText) && flag==false){
+				if(x.getCategory().contains(searchText) && flag==false){
 					filteredAds.add(x);
 					flag=true;
 				}
